@@ -67,21 +67,30 @@
 
         /* Hero Section */
         .hero {
+            background: #1a3d5c;
+            padding: 40px 20px;
             text-align: center;
-            padding: 30px 20px 50px;
-            max-width: 800px;
+        }
+        .hero-inner {
+            max-width: 750px;
             margin: 0 auto;
         }
         .hero-text {
-            font-size: 1.5rem;
-            color: #2d3a4a;
+            font-size: 1.4rem;
+            color: #fff4ee;
             font-weight: 300;
-            line-height: 1.7;
+            line-height: 1.8;
             font-style: italic;
+            margin-bottom: 25px;
         }
         .hero-text strong {
-            color: #1a3d5c;
-            font-weight: 600;
+            color: #fff;
+            font-weight: 500;
+        }
+        .hero-signature img {
+            height: 45px;
+            width: auto;
+            opacity: 0.9;
         }
 
         /* Main Content */
@@ -213,7 +222,10 @@
         /* Responsive */
         @media (max-width: 600px) {
             .hero-text {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+            }
+            .hero-signature img {
+                height: 35px;
             }
             .app-card {
                 padding: 20px;
@@ -246,7 +258,12 @@
 
     <!-- Hero -->
     <section class="hero">
-        <p class="hero-text">An effort to recreate what it feels like to be in a few of <strong>Oregon's most beautiful places</strong> — through video, apps, and digital experiences.</p>
+        <div class="hero-inner">
+            <p class="hero-text">An effort to recreate what it feels like to be in a few of <strong>Oregon's most beautiful places</strong> — through video, apps, and digital experiences.</p>
+            <div class="hero-signature">
+                <img src="images/signature.png" alt="tyler">
+            </div>
+        </div>
     </section>
 
     <!-- Main Content -->
