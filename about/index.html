@@ -82,6 +82,24 @@
             filter: invert(20%) sepia(15%) saturate(500%) hue-rotate(180deg);
         }
 
+        .social-links {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .social-links a {
+            color: #5a6a7a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #1a3d5c;
+        }
+
         /* Footer */
         .footer {
             background: #1a3d5c;
@@ -139,14 +157,19 @@
         <h1 class="page-title">About</h1>
 
         <div class="about-content">
-            <p>This site is run by me — <span class="highlight">Tyler Hulett, PhD</span>. I'm a 5th generation Oregonian, scientist, and part-time filmmaker.</p>
+            <p>This site is run by me — <span class="highlight">Tyler Hulett, PhD</span>. I'm a 5th generation Oregonian, scientist, and part-time filmmaker based in Portland.</p>
 
-            <p>Discover Oregon started as an effort to recreate what it feels like to be in a few of Oregon's most beautiful places — through timelapse films, nature documentaries, and immersive video content.</p>
+            <p>By day, I work on antibody research at CDI Labs. By night (and weekends), I build apps and capture Oregon's landscapes through timelapse and video.</p>
 
-            <p>Now expanding into digital media and apps, including <a href="/frog-it/" style="color: #2d5016; font-weight: 500;">Frog It!</a> — a family dice game based on my grandmother's house rules.</p>
+            <p>Discover Oregon started as an effort to recreate what it feels like to be in a few of Oregon's most beautiful places. Now expanding into apps, including <a href="/frog-it/" style="color: #2d5016; font-weight: 500;">Frog It!</a> — a family dice game based on my grandmother's house rules.</p>
 
             <div class="signature-block">
                 <img src="../images/signature.png" alt="tyler">
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/tyler-hulett-2a716618/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/tylerhulett" target="_blank">X</a>
             </div>
         </div>
     </main>
