@@ -201,20 +201,43 @@
         .licensing-section {
             background: white;
             border-radius: 16px;
-            padding: 45px;
+            padding: 35px 40px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 25px;
+        }
+        .licensing-section:first-of-type {
             margin-top: 60px;
         }
         .licensing-section h2 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #1a3d5c;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        .licensing-placeholder {
-            color: #7a8a9a;
-            font-style: italic;
+        .licensing-section p {
+            color: #5a6a7a;
+            margin-bottom: 15px;
+        }
+        .license-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .license-links a {
+            display: inline-block;
+            padding: 8px 18px;
+            background: #f0f4f8;
+            color: #1a3d5c;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+        }
+        .license-links a:hover {
+            background: #1a3d5c;
+            color: white;
         }
 
         /* Lightbox */
@@ -440,10 +463,39 @@
             </div>
         </section>
 
-        <!-- Licensing Section -->
+        <!-- Video Licensing -->
+        <section class="licensing-section" id="licensing">
+            <h2>Video Licensing</h2>
+            <p>Stock footage available for licensing:</p>
+            <div class="license-links">
+                <a href="https://www.keycutstock.com/artist/403" target="_blank">Keycut</a>
+                <a href="https://www.pond5.com/artist/discoveroregon" target="_blank">Pond5</a>
+                <a href="https://www.gettyimages.com/search/2/film?artistexact=Tyler%20Hulett" target="_blank">Getty Images</a>
+                <a href="https://www.shutterstock.com/g/discoveroregon/video" target="_blank">Shutterstock</a>
+                <a href="https://stock.adobe.com/contributor/207325769/Tyler%20Hulett" target="_blank">Adobe Stock</a>
+            </div>
+        </section>
+
+        <!-- Audio Licensing -->
         <section class="licensing-section">
-            <h2>Licensing</h2>
-            <p class="licensing-placeholder">Photo, audio, and video licensing information coming soon.</p>
+            <h2>Audio Licensing</h2>
+            <p>Nature ambience and sound effects:</p>
+            <div class="license-links">
+                <a href="https://www.pond5.com/artist/discoveroregon" target="_blank">Pond5</a>
+                <a href="https://www.asoundeffect.com/shop/sound-designer/discover-oregon" target="_blank">A Sound Effect</a>
+            </div>
+        </section>
+
+        <!-- Photo Licensing -->
+        <section class="licensing-section">
+            <h2>Photo Licensing</h2>
+            <p>Stock photography:</p>
+            <div class="license-links">
+                <a href="https://www.gettyimages.com/search/2/image?artistexact=Tyler%20Hulett" target="_blank">Getty Images</a>
+                <a href="https://stock.adobe.com/contributor/207325769/Tyler%20Hulett" target="_blank">Adobe Stock</a>
+                <a href="https://www.shutterstock.com/g/discoveroregon" target="_blank">Shutterstock</a>
+                <a href="https://www.pond5.com/artist/discoveroregon" target="_blank">Pond5</a>
+            </div>
         </section>
 
     </main>
