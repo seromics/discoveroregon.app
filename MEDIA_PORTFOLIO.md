@@ -31,7 +31,7 @@ Sound effects and audio available on:
 
 | Platform | Portfolio Link |
 |----------|---------------|
-| **Pond5** | https://www.pond5.com/artist/discoveroregon |
+| **Pond5** | https://www.pond5.com/artist/discoveroregon?tab=sfx |
 | **A Sound Effect** | https://www.asoundeffect.com/shop/sound-designer/discover-oregon |
 
 **Content includes:**
