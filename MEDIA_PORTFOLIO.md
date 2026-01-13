@@ -47,7 +47,7 @@ Stock photography available on:
 
 | Platform | Portfolio Link |
 |----------|---------------|
-| **Getty Images** | https://www.gettyimages.com/search/2/image?artistexact=Tyler%20Hulett |
+| **Getty Images** | https://www.gettyimages.com/search/2/image-film?family=creative&sort=mostpopular&phrase=%22tyler%20hulett%22 |
 | **Adobe Stock** | https://stock.adobe.com/contributor/207325769/Tyler%20Hulett |
 | **Shutterstock** | https://www.shutterstock.com/g/discoveroregon |
 | **Pond5** | https://www.pond5.com/artist/discoveroregon?tab=photo |
