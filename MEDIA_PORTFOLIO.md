@@ -65,13 +65,13 @@ Stock photography available on:
 Channel: https://www.youtube.com/@tylerhulett2909
 
 ### Discover Oregon Films (on site)
-- igKK-T0_2rk
 - G3wJcq5uF8w
 - xsxhS7NmoFI
 - 2tksAb7Sjgg
-
-<!-- Portraits of Oregon (not currently on site)
 - ULwAUXKYFF4
+
+<!-- Not currently on site
+- igKK-T0_2rk (Portraits of Oregon)
 -->
 
 ### Short Videos (on site)
