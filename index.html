@@ -12,6 +12,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: #fff4ee;
@@ -19,32 +22,47 @@
             color: #2d3a4a;
         }
 
-        /* Header */
+        /* Sticky Header */
         .header {
-            text-align: center;
-            padding: 50px 20px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 12px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
         }
         .logo {
-            max-width: 400px;
-            width: 85%;
-            height: auto;
-            margin-bottom: 15px;
+            height: 36px;
+            width: auto;
         }
-        .tagline {
-            font-size: 1.1rem;
-            color: #5a6a7a;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+        .nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav a {
+            color: #1a3d5c;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #4a7c23;
         }
 
         /* Hero Image */
         .hero-image {
             width: 100%;
-            height: 350px;
-            background: url('images/hero-aurora.jpg') center 30% / cover no-repeat;
+            height: 450px;
+            background: url('images/hero-aurora.jpg') center center / cover no-repeat;
             position: relative;
         }
         .hero-image::after {
@@ -53,30 +71,30 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 120px;
-            background: linear-gradient(transparent, #fff4ee);
+            height: 150px;
+            background: linear-gradient(transparent, rgba(26,61,92,0.3));
         }
         .hero-caption {
             position: absolute;
-            bottom: 15px;
+            bottom: 12px;
             right: 15px;
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.7);
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
-        /* Hero Section */
-        .hero {
+        /* Hero Quote Section */
+        .hero-quote {
             background: #1a3d5c;
-            padding: 40px 20px;
+            padding: 45px 25px;
             text-align: center;
         }
-        .hero-inner {
+        .hero-quote-inner {
             max-width: 750px;
             margin: 0 auto;
         }
         .hero-text {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             color: #fff4ee;
             font-weight: 300;
             line-height: 1.8;
@@ -97,17 +115,17 @@
         .main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px 20px 40px;
+            padding: 50px 25px;
         }
 
         /* Section Styles */
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #1a3d5c;
             margin-bottom: 25px;
             text-align: center;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             font-weight: 400;
         }
 
@@ -115,50 +133,66 @@
         .apps-section {
             margin-bottom: 50px;
         }
+        .app-grid {
+            display: grid;
+            gap: 25px;
+        }
         .app-card {
             background: white;
             border-radius: 16px;
             padding: 30px;
             display: flex;
-            gap: 30px;
+            gap: 25px;
             align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         }
         .app-icon {
-            width: 140px;
-            height: 140px;
-            border-radius: 28px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            flex-shrink: 0;
         }
         .app-info {
             flex: 1;
-            min-width: 280px;
         }
         .app-info h3 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
             color: #1a3d5c;
         }
-        .app-info p {
-            color: #4a5a6a;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .app-link {
-            display: inline-block;
-            background: #2d5016;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 8px;
+        .app-info h3 a {
+            color: inherit;
             text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s, transform 0.2s;
         }
-        .app-link:hover {
-            background: #3d6820;
-            transform: translateY(-2px);
+        .app-info h3 a:hover {
+            color: #4a7c23;
+        }
+        .app-info p {
+            color: #5a6a7a;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        .app-status {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .app-status.coming-soon {
+            background: #fef3cd;
+            color: #856404;
+        }
+        .app-status.available {
+            background: #d4edda;
+            color: #155724;
         }
 
         /* Media Section */
@@ -173,9 +207,9 @@
             text-align: center;
         }
         .coming-soon-box h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #5a6a7a;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: 400;
         }
         .coming-soon-box p {
@@ -187,68 +221,89 @@
         .footer {
             background: #1a3d5c;
             color: white;
-            padding: 35px 20px;
+            padding: 40px 25px;
             text-align: center;
         }
-        .signature {
-            margin-bottom: 15px;
+        .footer-signature {
+            margin-bottom: 20px;
         }
-        .signature img {
+        .footer-signature img {
             height: 40px;
             width: auto;
             opacity: 0.85;
         }
-        .footer-links {
+        .footer-nav {
             display: flex;
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
-        .footer-links a {
+        .footer-nav a {
             color: #a8c8e8;
             text-decoration: none;
+            font-size: 0.9rem;
             transition: color 0.2s;
         }
-        .footer-links a:hover {
+        .footer-nav a:hover {
             color: white;
-            text-decoration: underline;
         }
         .copyright {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #7a9aba;
         }
 
         /* Responsive */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 15px;
+            }
+            .logo {
+                height: 28px;
+            }
+            .nav {
+                gap: 15px;
+            }
+            .nav a {
+                font-size: 0.85rem;
+            }
+            .hero-image {
+                height: 300px;
+            }
             .hero-text {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
             }
             .hero-signature img {
                 height: 35px;
             }
+            .main {
+                padding: 35px 20px;
+            }
             .app-card {
-                padding: 20px;
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
             }
             .app-icon {
-                width: 110px;
-                height: 110px;
-            }
-            .app-info h3 {
-                font-size: 1.3rem;
-            }
-            .signature {
-                font-size: 1.4rem;
+                width: 90px;
+                height: 90px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Sticky Header -->
     <header class="header">
-        <img src="images/logo-wide.png" alt="Discover Oregon" class="logo">
-        <p class="tagline">Digital Media & Apps from the Pacific Northwest</p>
+        <a href="/" class="logo-link">
+            <img src="images/logo-wide.png" alt="Discover Oregon" class="logo">
+        </a>
+        <nav class="nav">
+            <a href="#apps">Apps</a>
+            <a href="#media">Media</a>
+            <a href="about/">About</a>
+            <a href="mailto:support@discoveroregon.app">Contact</a>
+        </nav>
     </header>
 
     <!-- Hero Image -->
@@ -256,9 +311,9 @@
         <span class="hero-caption">Aurora over Oregon, May 2024</span>
     </div>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-inner">
+    <!-- Hero Quote -->
+    <section class="hero-quote">
+        <div class="hero-quote-inner">
             <p class="hero-text">An effort to recreate what it feels like to be in a few of <strong>Oregon's most beautiful places</strong> — through video, apps, and digital experiences.</p>
             <div class="hero-signature">
                 <img src="images/signature.png" alt="tyler">
@@ -270,20 +325,22 @@
     <main class="main">
 
         <!-- Apps Section -->
-        <section class="apps-section">
+        <section id="apps" class="apps-section">
             <h2 class="section-title">Apps</h2>
-            <div class="app-card">
-                <img src="images/frog-dice-large.png" alt="Frog It! App Icon" class="app-icon">
-                <div class="app-info">
-                    <h3>Frog It!</h3>
-                    <p>A strategic five-dice scoring game with a twist — save unused rolls as "frogs" and use them when you need them most. Based on Grandma Kathy's family house rules.</p>
-                    <a href="frog-it/" class="app-link">Learn More</a>
+            <div class="app-grid">
+                <div class="app-card">
+                    <img src="images/frog-dice-large.png" alt="Frog It!" class="app-icon">
+                    <div class="app-info">
+                        <h3><a href="frog-it/">Frog It!</a></h3>
+                        <p>A strategic five-dice scoring game with a twist — save unused rolls as "frogs" and use them when you need them most. Based on Grandma Kathy's family house rules.</p>
+                        <span class="app-status coming-soon">Coming Soon</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Media Section -->
-        <section class="media-section">
+        <section id="media" class="media-section">
             <h2 class="section-title">Video & Media</h2>
             <div class="coming-soon-box">
                 <h3>Coming Soon</h3>
@@ -295,11 +352,16 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="signature"><img src="images/signature.png" alt="tyler"></div>
-        <div class="footer-links">
-            <a href="about/">About</a>
-            <a href="mailto:support@discoveroregon.app">Contact</a>
+        <div class="footer-signature">
+            <img src="images/signature.png" alt="tyler">
         </div>
+        <nav class="footer-nav">
+            <a href="#apps">Apps</a>
+            <a href="#media">Media</a>
+            <a href="about/">About</a>
+            <a href="frog-it/privacy/">Privacy</a>
+            <a href="mailto:support@discoveroregon.app">Contact</a>
+        </nav>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
 
