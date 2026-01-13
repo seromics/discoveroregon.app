@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frog It! - Strategic Dice Game | Discover Oregon</title>
-    <meta name="description" content="A strategic five-dice scoring game with a twist - save unused rolls as frogs and use them when you need them most!">
+    <meta name="description" content="A strategic five-dice scoring game with a twist - save unused rolls as frogs and use them when you need them most! Based on 20+ years of family tradition.">
     <link rel="icon" type="image/png" href="../images/frog-dice-large.png">
     <style>
         * {
@@ -143,9 +143,41 @@
             text-align: center;
         }
 
+        /* Story Section */
+        .story-section {
+            background: white;
+            padding: 50px 20px;
+        }
+        .story-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .story-text {
+            flex: 1;
+        }
+        .story-text h2 {
+            color: #1a3d5c;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .story-text p {
+            color: #3a4a5a;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+        .trophy-img {
+            width: 120px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
         /* Features Section */
         .features {
-            background: white;
+            background: #fff4ee;
             padding: 50px 20px;
         }
         .features-inner {
@@ -154,7 +186,7 @@
         }
         .section-title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: #1a3d5c;
             margin-bottom: 40px;
         }
@@ -164,18 +196,18 @@
             gap: 30px;
         }
         .feature-card {
-            background: linear-gradient(135deg, #f0f9e8 0%, #e8f5d6 100%);
+            background: white;
             border-radius: 16px;
             padding: 25px;
-            border: 2px solid #7cae43;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
         .feature-card h3 {
-            color: #3d6010;
-            font-size: 1.3rem;
+            color: #1a3d5c;
+            font-size: 1.2rem;
             margin-bottom: 10px;
         }
         .feature-card p {
-            color: #4a6a2a;
+            color: #5a6a7a;
             line-height: 1.6;
         }
 
@@ -225,7 +257,7 @@
 
         /* Game Modes */
         .game-modes {
-            background: linear-gradient(135deg, #e8dff5 0%, #d8cbe8 100%);
+            background: white;
             padding: 50px 20px;
         }
         .game-modes-inner {
@@ -234,8 +266,8 @@
         }
         .game-modes h2 {
             text-align: center;
-            color: #472F6D;
-            font-size: 1.8rem;
+            color: #1a3d5c;
+            font-size: 1.6rem;
             margin-bottom: 30px;
         }
         .mode-grid {
@@ -244,17 +276,17 @@
             gap: 20px;
         }
         .mode-card {
-            background: white;
+            background: #f8f9fa;
             border-radius: 12px;
             padding: 20px;
-            border: 2px solid #472F6D;
+            border: 1px solid #e0e0e0;
         }
         .mode-card h3 {
-            color: #472F6D;
+            color: #1a3d5c;
             margin-bottom: 8px;
         }
         .mode-card p {
-            color: #5a4a6a;
+            color: #5a6a7a;
             font-size: 0.95rem;
             line-height: 1.5;
         }
@@ -307,8 +339,19 @@
                 height: 150px;
                 border-radius: 30px;
             }
-            .section-title {
+            .story-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .trophy-img {
+                order: -1;
+                width: 100px;
+            }
+            .story-text h2 {
                 font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
             }
             .frog-banking h2, .game-modes h2 {
                 font-size: 1.4rem;
@@ -358,22 +401,35 @@
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- The Story -->
+    <section class="story-section">
+        <div class="story-inner">
+            <div class="story-text">
+                <h2>A Family Game, 20+ Years in the Making</h2>
+                <p>My grandma Kathy loved the classic five-dice game, but she played it differently. She'd keep a bowl of little plastic frogs on the table, and whenever you scored early, you'd bank the unused rolls as frogs to save for later. She called it her "house rules" – and every time I visited as a kid, she was there playing, always inviting us to join.</p>
+                <p>Today, my family still holds annual tournaments at the lake to crown "The Queen." We've done this for over 20 years now.</p>
+                <p>I've tried other dice game apps, but none of them scratched the itch – because what's the fun without the frogs? Without that banking mechanic, it's just rolling dice and filling categories. The frogs add real strategy and make every game different. I couldn't stand not having a proper version of this for my family, so I built one. Hope you'll love it too.</p>
+            </div>
+            <img src="../images/ui/trophy_large.png" alt="The Queen Trophy" class="trophy-img">
+        </div>
+    </section>
+
+    <!-- How It Works -->
     <section class="features">
         <div class="features-inner">
-            <h2 class="section-title">A Classic Dice Game with a Strategic Twist</h2>
+            <h2 class="section-title">How It Works</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <h3>Roll & Score</h3>
-                    <p>Roll five dice up to three times per turn. Hold the dice you want to keep and try to complete scoring categories like Three of a Kind, Full House, Large Straight, and more!</p>
+                    <p>Roll five dice up to three times per turn. Hold the dice you want and try to complete scoring categories like Three of a Kind, Full House, Large Straight, and more.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Bank Your Frogs</h3>
-                    <p>Here's the twist: unused rolls become "frogs" that you can save for later! Score early to bank frogs, then spend them when you really need that extra roll.</p>
+                    <p>Here's the twist: unused rolls become "frogs" that you save for later. Score early to bank frogs, then spend them when you really need that extra roll.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Go for SPLASH!</h3>
-                    <p>Roll all five dice matching for a SPLASH! (Five of a Kind). Your first scores 50 points, and each additional SPLASH earns 100 bonus points!</p>
+                    <p>Roll all five dice matching for a SPLASH! (Five of a Kind). Your first scores 50 points, and each additional SPLASH earns 100 bonus points.</p>
                 </div>
             </div>
         </div>
@@ -391,7 +447,7 @@
             </div>
             <p>Every turn, you get 3 free rolls. But what happens when you score after just 1 or 2 rolls? Those unused rolls become <strong>frogs</strong> that you bank for later!</p>
             <div class="highlight">
-                <p>Need an extra roll on a crucial turn? Tap "Frog It!" to spend a banked frog and roll again. It's a blend of luck and resource management that transforms the classic dice game!</p>
+                <p>Need an extra roll on a crucial turn? Tap "Frog It!" to spend a banked frog and roll again. It's a blend of luck and resource management that transforms the classic dice game.</p>
             </div>
         </div>
     </section>
@@ -399,11 +455,11 @@
     <!-- Game Modes -->
     <section class="game-modes">
         <div class="game-modes-inner">
-            <h2>Multiple Ways to Play</h2>
+            <h2>Ways to Play</h2>
             <div class="mode-grid">
                 <div class="mode-card">
                     <h3>Solo Play</h3>
-                    <p>Practice your strategy and aim for high scores. Games with standard tournament rules are eligible for trophies!</p>
+                    <p>Practice your strategy and aim for high scores. Games with standard rules are eligible for trophies.</p>
                 </div>
                 <div class="mode-card">
                     <h3>Local Multiplayer</h3>
@@ -411,7 +467,7 @@
                 </div>
                 <div class="mode-card">
                     <h3>Online Challenges</h3>
-                    <p>Compete in weekly tournaments and daily wildcards with randomized rules. Submit your best scores to the global leaderboard!</p>
+                    <p>Weekly tournaments and daily wildcards with special rules. Submit your best to the global leaderboard.</p>
                 </div>
             </div>
         </div>
