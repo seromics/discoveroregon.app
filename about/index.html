@@ -19,52 +19,129 @@
             color: #2d3a4a;
         }
 
-        /* Header */
+        /* Sticky Header */
         .header {
-            text-align: center;
-            padding: 30px 20px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .logo {
-            max-width: 300px;
-            width: 70%;
-            height: auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .logo-link {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            height: 36px;
+            width: auto;
+        }
+
+        /* Desktop Nav */
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav a {
+            color: #1a3d5c;
             text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #4a7c23;
+        }
+
+        /* Mobile Menu Button */
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #1a3d5c;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Mobile Dropdown */
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .mobile-nav.open {
+            display: block;
+        }
+        .mobile-nav a {
+            display: block;
+            padding: 12px 30px;
+            color: #1a3d5c;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+        .mobile-nav a:hover {
+            background: #f8f8f8;
+            color: #4a7c23;
         }
 
         /* Main Content */
         .main {
             max-width: 700px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 60px 30px;
         }
 
         .page-title {
             font-size: 2rem;
             color: #1a3d5c;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 400;
         }
 
         .about-content {
             background: white;
             border-radius: 16px;
-            padding: 40px;
+            padding: 45px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
 
         .about-content p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #3a4a5a;
             margin-bottom: 20px;
         }
 
-        .about-content p:last-child {
-            margin-bottom: 0;
+        .about-content a {
+            color: #2d5016;
+            font-weight: 500;
+        }
+        .about-content a:hover {
+            color: #4a7c23;
         }
 
         .highlight {
@@ -73,27 +150,26 @@
         }
 
         .signature-block {
-            margin-top: 30px;
-            text-align: right;
+            margin-top: 35px;
+            text-align: center;
         }
         .signature-block img {
-            height: 50px;
+            height: 55px;
             width: auto;
-            filter: invert(20%) sepia(15%) saturate(500%) hue-rotate(180deg);
         }
 
         .social-links {
-            margin-top: 25px;
-            padding-top: 20px;
+            margin-top: 30px;
+            padding-top: 25px;
             border-top: 1px solid #eee;
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
         }
         .social-links a {
             color: #5a6a7a;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: color 0.2s;
         }
         .social-links a:hover {
@@ -104,52 +180,112 @@
         .footer {
             background: #1a3d5c;
             color: white;
-            padding: 35px 20px;
+            padding: 45px 30px;
             text-align: center;
-            margin-top: 50px;
         }
-        .footer-links {
+        .footer-signature {
+            margin-bottom: 25px;
+        }
+        .footer-signature img {
+            height: 45px;
+            width: auto;
+            opacity: 0.85;
+        }
+        .footer-nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 35px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
-        .footer-links a {
+        .footer-nav a {
             color: #a8c8e8;
             text-decoration: none;
+            font-size: 0.95rem;
             transition: color 0.2s;
         }
-        .footer-links a:hover {
+        .footer-nav a:hover {
             color: white;
-            text-decoration: underline;
         }
         .copyright {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #7a9aba;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .about-content {
-                padding: 25px;
+        /* MOBILE - under 768px */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 20px;
             }
-            .about-content p {
-                font-size: 1.05rem;
+            .logo {
+                height: 30px;
+            }
+            .nav {
+                display: none;
+            }
+            .menu-btn {
+                display: block;
+            }
+
+            .main {
+                padding: 40px 20px;
             }
             .page-title {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
+                margin-bottom: 25px;
+            }
+            .about-content {
+                padding: 30px 25px;
+            }
+            .about-content p {
+                font-size: 1rem;
+            }
+            .signature-block img {
+                height: 45px;
+            }
+            .social-links {
+                gap: 20px;
+            }
+            .social-links a {
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding: 35px 20px;
+            }
+            .footer-nav {
+                gap: 20px;
+            }
+            .footer-nav a {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Sticky Header -->
     <header class="header">
         <a href="/" class="logo-link">
             <img src="../images/logo-wide.png" alt="Discover Oregon" class="logo">
         </a>
+        <nav class="nav">
+            <a href="/#apps">Apps</a>
+            <a href="/#media">Media</a>
+            <a href="/about/">About</a>
+            <a href="mailto:tyler@discoveroregon.app">Contact</a>
+        </nav>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/#apps">Apps</a>
+            <a href="/#media">Media</a>
+            <a href="/about/">About</a>
+            <a href="mailto:tyler@discoveroregon.app">Contact</a>
+        </nav>
     </header>
 
     <!-- Main Content -->
@@ -161,10 +297,10 @@
 
             <p>By day, I work on antibody research at CDI Labs. By night (and weekends), I build apps and capture Oregon's landscapes through timelapse and video.</p>
 
-            <p>Discover Oregon started as an effort to recreate what it feels like to be in a few of Oregon's most beautiful places. Now expanding into apps, including <a href="/frog-it/" style="color: #2d5016; font-weight: 500;">Frog It!</a> — a family dice game based on my grandmother's house rules.</p>
+            <p>Discover Oregon started as an effort to recreate what it feels like to be in a few of Oregon's most beautiful places. Now expanding into apps, including <a href="/frog-it/">Frog It!</a> — a family dice game based on my grandmother's house rules.</p>
 
             <div class="signature-block">
-                <img src="../images/signature.png" alt="tyler">
+                <img src="../images/signature-blue.png" alt="tyler">
             </div>
 
             <div class="social-links">
@@ -176,12 +312,24 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="/">Home</a>
-            <a href="mailto:support@discoveroregon.app">Contact</a>
+        <div class="footer-signature">
+            <img src="../images/signature.png" alt="tyler">
         </div>
+        <nav class="footer-nav">
+            <a href="/#apps">Apps</a>
+            <a href="/#media">Media</a>
+            <a href="/about/">About</a>
+            <a href="/frog-it/privacy/">Privacy</a>
+            <a href="mailto:tyler@discoveroregon.app">Contact</a>
+        </nav>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileNav').classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>
