@@ -245,22 +245,18 @@
         .media-section {
             margin-bottom: 60px;
         }
-        .coming-soon-box {
-            background: white;
-            border: 2px dashed #ccd0d5;
-            border-radius: 16px;
-            padding: 60px 30px;
-            text-align: center;
+        .media-card {
+            text-decoration: none;
+            flex-direction: column;
         }
-        .coming-soon-box h3 {
-            font-size: 1.2rem;
-            color: #5a6a7a;
-            margin-bottom: 10px;
-            font-weight: 400;
+        .media-card h3 {
+            color: #1a3d5c;
         }
-        .coming-soon-box p {
-            color: #7a8a9a;
-            line-height: 1.6;
+        .media-preview {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         /* Footer */
@@ -409,6 +405,20 @@
     <!-- Main Content -->
     <main class="main">
 
+        <!-- Media Section -->
+        <section id="media" class="media-section">
+            <h2 class="section-title">Video & Media</h2>
+            <div class="app-grid">
+                <a href="/media/" class="app-card media-card">
+                    <img src="images/media-preview.png" alt="Oregon timelapse videos" class="media-preview">
+                    <div class="app-info">
+                        <h3>Oregon Films & Licensing</h3>
+                        <p>Timelapse films capturing Oregon's landscapes. Stock footage and nature soundscapes available for licensing on Pond5, Getty, Shutterstock, and more.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <!-- Apps Section -->
         <section id="apps" class="apps-section">
             <h2 class="section-title">Apps</h2>
@@ -421,15 +431,6 @@
                         <span class="app-status coming-soon">Coming Soon</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Media Section -->
-        <section id="media" class="media-section">
-            <h2 class="section-title">Video & Media</h2>
-            <div class="coming-soon-box">
-                <h3>Coming Soon</h3>
-                <p>Timelapse films, nature documentaries, and Oregon content returning soon.</p>
             </div>
         </section>
 
