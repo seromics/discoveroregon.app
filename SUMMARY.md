@@ -1,6 +1,6 @@
 # Discover Oregon Website Summary
 
-**Last Updated**: January 12, 2026
+**Last Updated**: January 13, 2026
 
 ---
 
@@ -52,6 +52,7 @@ Changes go live within ~1 minute after push.
 discoveroregon.app/
 ├── index.html              # Homepage (media + apps)
 ├── CNAME                   # GitHub Pages custom domain
+├── .nojekyll               # IMPORTANT: Bypasses Jekyll build (see Troubleshooting)
 ├── SUMMARY.md              # This file
 ├── MEDIA_PORTFOLIO.md      # Asset reference doc
 │
@@ -82,7 +83,7 @@ discoveroregon.app/
 ## Pages Overview
 
 ### Homepage (`/`)
-- Hero image: Aurora over Oregon
+- Hero image: Mt. Hood (hood-landing.jpg)
 - Quote block with signature
 - **Media section** (first): Links to /media/ with preview screenshot
 - **Apps section**: Frog It! card with "Coming Soon" badge
@@ -225,6 +226,70 @@ python3 -m http.server 8000
 - On a new machine, you'll need to either:
   - Set up SSH keys for the seromics GitHub account, OR
   - Use HTTPS with a personal access token
+
+---
+
+## Troubleshooting
+
+### GitHub Pages Build Failing
+
+**IMPORTANT**: If GitHub Pages shows "errored" or "Page build failed", check the following:
+
+#### 1. Verify `.nojekyll` file exists
+```bash
+ls -la .nojekyll
+```
+This file MUST exist in the repo root. It tells GitHub Pages to skip Jekyll processing and serve files directly. Without it, Jekyll may fail on markdown files or other content.
+
+#### 2. Check build status
+```bash
+# Check Pages status
+gh api repos/seromics/discoveroregon.app/pages --jq '.status'
+
+# Check recent builds
+gh api repos/seromics/discoveroregon.app/pages/builds --jq '.[0]'
+
+# Check GitHub Actions runs
+gh run list --repo seromics/discoveroregon.app --limit 5
+```
+
+#### 3. If builds are stuck or errored
+Sometimes the deploy job gets stuck in "queued" state. To fix:
+```bash
+# Trigger a new build with an empty commit
+git commit --allow-empty -m "Trigger rebuild" && git push
+```
+
+#### 4. Verify site is actually live
+Even if API shows "building", the site may already be deployed:
+```bash
+curl -sI https://discoveroregon.app | head -5
+```
+Look for `HTTP/2 200` - Cloudflare CDN may serve cached content while GitHub reports building.
+
+### CSS Layout Issues
+
+**DO NOT use `html, body { height: 100%; }`** with flexbox layouts. This was removed from all pages because it caused:
+- Hero images to collapse/disappear
+- Footers to float above content
+- Flex containers to not calculate heights correctly
+
+The correct pattern for sticky footers is:
+```css
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main { flex: 1; }
+```
+
+### Changes Not Appearing
+
+1. **Wait 1-2 minutes** after push for GitHub Pages to deploy
+2. **Clear Cloudflare cache** if needed (Dashboard > Caching > Purge Everything)
+3. **Hard refresh browser** (Cmd+Shift+R on Mac)
+4. **Check GitHub Actions** to confirm deploy completed successfully
 
 ---
 
