@@ -1,6 +1,6 @@
 # Discover Oregon - Media Portfolio & Licensing
 
-**Tyler Hulett** — Portland, Oregon
+**Tyler Hulett** — Hood River, Oregon
 Contact: tyler@discoveroregon.app
 
 ---

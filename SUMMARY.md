@@ -232,7 +232,7 @@ python3 -m http.server 8000
 
 **Discover Oregon Video Productions, LLC**
 - Contact: tyler@discoveroregon.app
-- Location: Portland, Oregon
+- Location: Hood River, Oregon
 
 ---
 
