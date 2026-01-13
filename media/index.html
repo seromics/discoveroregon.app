@@ -117,96 +117,13 @@
             margin-bottom: 50px;
         }
 
-        /* Section */
-        .section {
-            margin-bottom: 60px;
-        }
-        .section-title {
-            font-size: 1.3rem;
-            color: #1a3d5c;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 500;
-            border-bottom: 2px solid #1a3d5c;
-            padding-bottom: 10px;
-        }
-
-        /* Video Grid */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .video-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .video-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-        .video-thumb {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #1a3d5c;
-        }
-        .video-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(0,0,0,0.7);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .play-btn::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 18px solid white;
-            border-top: 11px solid transparent;
-            border-bottom: 11px solid transparent;
-            margin-left: 4px;
-        }
-        .video-info {
-            padding: 15px 18px;
-        }
-        .video-info h3 {
-            font-size: 1rem;
-            color: #1a3d5c;
-            margin-bottom: 5px;
-            line-height: 1.4;
-        }
-        .video-info p {
-            font-size: 0.85rem;
-            color: #7a8a9a;
-        }
-
         /* Licensing Section */
         .licensing-section {
             background: white;
             border-radius: 16px;
             padding: 35px 40px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-top: 25px;
-        }
-        .licensing-section:first-of-type {
-            margin-top: 60px;
+            margin-bottom: 40px;
         }
         .licensing-section h2 {
             font-size: 1.1rem;
@@ -215,24 +132,31 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        .licensing-section p {
+        .licensing-section > p {
             color: #5a6a7a;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
+
+        /* Full-width license buttons */
         .license-links {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
             gap: 12px;
+            margin-bottom: 30px;
+        }
+        .license-links.audio-links {
+            grid-template-columns: repeat(2, 1fr);
         }
         .license-links a {
-            display: inline-block;
-            padding: 8px 18px;
+            display: block;
+            padding: 12px 18px;
             background: #f0f4f8;
             color: #1a3d5c;
             text-decoration: none;
             border-radius: 6px;
             font-size: 0.9rem;
             font-weight: 500;
+            text-align: center;
             transition: background 0.2s, color 0.2s;
         }
         .license-links a:hover {
@@ -240,43 +164,82 @@
             color: white;
         }
 
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.9);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
+        /* Films Section */
+        .films-section {
+            margin-bottom: 50px;
         }
-        .lightbox.open {
-            display: flex;
+        .films-section h2 {
+            font-size: 1.3rem;
+            color: #1a3d5c;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-align: center;
         }
-        .lightbox-content {
-            width: 90%;
-            max-width: 900px;
-            aspect-ratio: 16/9;
+        .films-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
-        .lightbox-content iframe {
+        .films-grid .film-item:last-child {
+            grid-column: 1 / -1;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        .shorts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .short-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .short-item iframe {
             width: 100%;
-            height: 100%;
+            aspect-ratio: 9/16;
+            border: none;
+            display: block;
+        }
+        .film-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .film-item iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            display: block;
+        }
+
+        /* Embed Grid */
+        .embed-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .embed-item {
+            background: #f0f4f8;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .embed-item iframe {
+            width: 100%;
             border: none;
         }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            line-height: 1;
+        .video-embed iframe {
+            aspect-ratio: 16/9;
+            height: auto;
         }
-        .lightbox-close:hover {
-            color: #ccc;
+        .audio-embed {
+            padding: 15px;
+            background: #1a3d5c;
+        }
+        .audio-embed iframe {
+            height: 90px;
         }
 
         /* Footer */
@@ -331,23 +294,33 @@
                 font-size: 1rem;
                 margin-bottom: 35px;
             }
-            .video-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
             .licensing-section {
                 padding: 30px 25px;
+            }
+            .license-links {
+                grid-template-columns: 1fr;
+            }
+            .license-links.audio-links {
+                grid-template-columns: 1fr;
+            }
+            .embed-grid {
+                grid-template-columns: 1fr;
+            }
+            .films-grid {
+                grid-template-columns: 1fr;
+            }
+            .films-grid .film-item:last-child {
+                max-width: 100%;
+            }
+            .shorts-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
             }
             .footer {
                 padding: 35px 20px;
             }
             .footer-links {
                 gap: 20px;
-            }
-            .lightbox-close {
-                top: 15px;
-                right: 20px;
-                font-size: 2rem;
             }
         }
     </style>
@@ -379,84 +352,57 @@
     <!-- Main Content -->
     <main class="main">
         <h1 class="page-title">Video & Media</h1>
-        <p class="page-subtitle">Timelapse films, nature documentaries, and Oregon landscapes</p>
+        <p class="page-subtitle">Timelapse films, nature soundscapes, and Oregon landscapes</p>
 
-        <!-- Discover Oregon Section -->
-        <section class="section">
-            <h2 class="section-title">Discover Oregon</h2>
-            <div class="video-grid">
-                <!-- Video 1 - Replace VIDEO_ID_1 with actual ID -->
-                <div class="video-card" onclick="openVideo('VIDEO_ID_1')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/VIDEO_ID_1/maxresdefault.jpg" alt="Video thumbnail">
-                        <div class="play-btn"></div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Video Title Here</h3>
-                        <p>Timelapse</p>
-                    </div>
+        <!-- Discover Oregon Films -->
+        <section class="films-section">
+            <h2>Discover Oregon Films</h2>
+            <div class="films-grid">
+                <div class="film-item">
+                    <iframe src="https://www.youtube.com/embed/igKK-T0_2rk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- Video 2 -->
-                <div class="video-card" onclick="openVideo('VIDEO_ID_2')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/VIDEO_ID_2/maxresdefault.jpg" alt="Video thumbnail">
-                        <div class="play-btn"></div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Video Title Here</h3>
-                        <p>Timelapse</p>
-                    </div>
+                <div class="film-item">
+                    <iframe src="https://www.youtube.com/embed/G3wJcq5uF8w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- Video 3 -->
-                <div class="video-card" onclick="openVideo('VIDEO_ID_3')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/VIDEO_ID_3/maxresdefault.jpg" alt="Video thumbnail">
-                        <div class="play-btn"></div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Video Title Here</h3>
-                        <p>Timelapse</p>
-                    </div>
+                <div class="film-item">
+                    <iframe src="https://www.youtube.com/embed/xsxhS7NmoFI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="film-item">
+                    <iframe src="https://www.youtube.com/embed/2tksAb7Sjgg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="film-item">
+                    <iframe src="https://www.youtube.com/embed/ULwAUXKYFF4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Short Videos Section -->
-        <section class="section">
-            <h2 class="section-title">Short Videos</h2>
-            <div class="video-grid">
-                <!-- Short 1 -->
-                <div class="video-card" onclick="openVideo('SHORT_ID_1')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/SHORT_ID_1/maxresdefault.jpg" alt="Video thumbnail">
-                        <div class="play-btn"></div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Short Title Here</h3>
-                        <p>Short</p>
-                    </div>
+        <!-- Short Videos -->
+        <section class="films-section">
+            <h2>Short Videos</h2>
+            <div class="shorts-grid">
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/j6DFvKT6qyc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- Short 2 -->
-                <div class="video-card" onclick="openVideo('SHORT_ID_2')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/SHORT_ID_2/maxresdefault.jpg" alt="Video thumbnail">
-                        <div class="play-btn"></div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Short Title Here</h3>
-                        <p>Short</p>
-                    </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/U1MEPe0dG6c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- Short 3 -->
-                <div class="video-card" onclick="openVideo('SHORT_ID_3')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/SHORT_ID_3/maxresdefault.jpg" alt="Video thumbnail">
-                        <div class="play-btn"></div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Short Title Here</h3>
-                        <p>Short</p>
-                    </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/VLEA-InQbDc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/CX8DSLWv0C8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/D1417qK60ig" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/o8GsQPcjWSU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/ZqykHFYr4fo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="short-item">
+                    <iframe src="https://www.youtube.com/embed/sDoePS95Gss" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -466,11 +412,22 @@
             <h2>Video Licensing</h2>
             <p>Stock footage available for licensing:</p>
             <div class="license-links">
-                <a href="https://www.keycutstock.com/artist/403" target="_blank">Keycut</a>
                 <a href="https://www.pond5.com/artist/discoveroregon?tab=footage" target="_blank">Pond5</a>
+                <a href="https://www.keycutstock.com/artist/403" target="_blank">Keycut</a>
                 <a href="https://www.gettyimages.com/search/2/film?artistexact=Tyler%20Hulett" target="_blank">Getty Images</a>
                 <a href="https://www.shutterstock.com/g/discoveroregon/video" target="_blank">Shutterstock</a>
                 <a href="https://stock.adobe.com/contributor/207325769/Tyler%20Hulett" target="_blank">Adobe Stock</a>
+            </div>
+            <div class="embed-grid">
+                <div class="embed-item video-embed">
+                    <iframe src="https://player.pond5.com/?item_id=81858195" allowfullscreen></iframe>
+                </div>
+                <div class="embed-item video-embed">
+                    <iframe src="https://player.pond5.com/?item_id=81990353" allowfullscreen></iframe>
+                </div>
+                <div class="embed-item video-embed">
+                    <iframe src="https://player.pond5.com/?item_id=81922509" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
 
@@ -478,40 +435,31 @@
         <section class="licensing-section">
             <h2>Audio Licensing</h2>
             <p>Nature ambience and sound effects:</p>
-            <div class="license-links">
+            <div class="license-links audio-links">
                 <a href="https://www.pond5.com/artist/discoveroregon?tab=sfx" target="_blank">Pond5</a>
                 <a href="https://www.asoundeffect.com/shop/sound-designer/discover-oregon" target="_blank">A Sound Effect</a>
             </div>
-        </section>
-
-        <!-- Photo Licensing -->
-        <section class="licensing-section">
-            <h2>Photo Licensing</h2>
-            <p>Stock photography:</p>
-            <div class="license-links">
-                <a href="https://www.gettyimages.com/search/2/image-film?family=creative&sort=mostpopular&phrase=%22tyler%20hulett%22" target="_blank">Getty Images</a>
-                <a href="https://stock.adobe.com/contributor/207325769/Tyler%20Hulett" target="_blank">Adobe Stock</a>
-                <a href="https://www.shutterstock.com/g/discoveroregon" target="_blank">Shutterstock</a>
-                <a href="https://www.pond5.com/artist/discoveroregon?tab=photo" target="_blank">Pond5</a>
+            <div class="embed-grid">
+                <div class="embed-item audio-embed">
+                    <iframe src="https://player.pond5.com/?item_id=111707852" allowfullscreen></iframe>
+                </div>
+                <div class="embed-item audio-embed">
+                    <iframe src="https://player.pond5.com/?item_id=113512442" allowfullscreen></iframe>
+                </div>
+                <div class="embed-item audio-embed">
+                    <iframe src="https://player.pond5.com/?item_id=111682795" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
 
     </main>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeVideo(event)">
-        <span class="lightbox-close" onclick="closeVideo()">&times;</span>
-        <div class="lightbox-content">
-            <iframe id="videoFrame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
             <a href="mailto:tyler@discoveroregon.app">tyler@discoveroregon.app</a>
             <a href="https://www.linkedin.com/in/tyler-hulett-2a716618/" target="_blank">LinkedIn</a>
-            <a href="https://x.com/tylerhulett" target="_blank">X</a>
+            <a href="https://x.com/seromics" target="_blank">X</a>
         </div>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
@@ -520,27 +468,6 @@
         function toggleMenu() {
             document.getElementById('mobileNav').classList.toggle('open');
         }
-
-        function openVideo(videoId) {
-            const iframe = document.getElementById('videoFrame');
-            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-            document.getElementById('lightbox').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeVideo(event) {
-            if (event && event.target !== event.currentTarget && !event.target.classList.contains('lightbox-close')) {
-                return;
-            }
-            const iframe = document.getElementById('videoFrame');
-            iframe.src = '';
-            document.getElementById('lightbox').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeVideo();
-        });
     </script>
 
 </body>
