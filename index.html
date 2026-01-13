@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frog It! - Strategic Dice Game | Discover Oregon</title>
-    <meta name="description" content="A strategic five-dice scoring game with a twist - save unused rolls as frogs and use them when you need them most!">
-    <link rel="icon" type="image/png" href="/images/frog-dice-large.png">
+    <title>Discover Oregon Video Productions, LLC - Online Media & Apps</title>
+    <meta name="description" content="Video production, online media, and mobile apps from Oregon. Home of Frog It! dice game.">
+    <link rel="icon" type="image/png" href="images/frog-dice-large.png">
     <style>
         * {
             margin: 0;
@@ -14,199 +14,121 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(180deg, #c8e6a0 0%, #a8d080 100%);
+            background: linear-gradient(180deg, #1a3d1a 0%, #2d5a2d 50%, #1a3d1a 100%);
             min-height: 100vh;
-            color: #2d5016;
+            color: #fff;
         }
 
         /* Header */
         .header {
             text-align: center;
-            padding: 40px 20px 20px;
+            padding: 60px 20px 40px;
         }
-        .logo {
-            max-width: 350px;
-            width: 90%;
-            height: auto;
+        .company-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         .tagline {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #3d6010;
-            margin-top: 10px;
+            font-size: 1.3rem;
+            color: #a8d080;
             font-style: italic;
         }
 
-        /* App Showcase */
-        .showcase {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            padding: 30px 20px;
+        /* Main Content */
+        .main {
             max-width: 1000px;
             margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.8rem;
+            color: #a8d080;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid #4a7c23;
+            padding-bottom: 10px;
+        }
+
+        /* Apps Section */
+        .apps-section {
+            margin-bottom: 60px;
+        }
+        .app-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 2px solid #4a7c23;
         }
         .app-icon {
-            width: 200px;
-            height: 200px;
-            border-radius: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 150px;
+            height: 150px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        .app-badges {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .app-info {
+            flex: 1;
+            min-width: 280px;
         }
-        .badge {
-            height: 50px;
-            cursor: pointer;
-            transition: transform 0.2s;
+        .app-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #fff;
         }
-        .badge:hover {
-            transform: scale(1.05);
+        .app-info p {
+            color: #c8e6a0;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-        .coming-soon-badge {
-            background: #333;
+        .app-link {
+            display: inline-block;
+            background: #4a7c23;
             color: white;
             padding: 12px 24px;
             border-radius: 8px;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        /* Features Section */
-        .features {
-            background: white;
-            padding: 50px 20px;
-        }
-        .features-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #2d5016;
-            margin-bottom: 40px;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .feature-card {
-            background: linear-gradient(135deg, #f0f9e8 0%, #e8f5d6 100%);
-            border-radius: 16px;
-            padding: 25px;
-            border: 2px solid #7cae43;
-        }
-        .feature-card h3 {
-            color: #3d6010;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .feature-card p {
-            color: #4a6a2a;
-            line-height: 1.6;
-        }
-
-        /* Frog Banking Highlight */
-        .frog-banking {
-            background: linear-gradient(135deg, #fef3cd 0%, #fce9a0 100%);
-            padding: 50px 20px;
-        }
-        .frog-banking-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .frog-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .frog-img {
-            width: 50px;
-            height: 50px;
-        }
-        .frog-banking h2 {
-            color: #8b6914;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        .frog-banking p {
-            color: #6b5210;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .frog-banking .highlight {
-            background: #fff3c4;
-            border: 2px solid #fabb00;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 25px;
-        }
-        .frog-banking .highlight p {
+            text-decoration: none;
             font-weight: 600;
-            color: #8b6914;
+            transition: background 0.2s;
+        }
+        .app-link:hover {
+            background: #5a9030;
         }
 
-        /* Game Modes */
-        .game-modes {
-            background: linear-gradient(135deg, #e8dff5 0%, #d8cbe8 100%);
-            padding: 50px 20px;
+        /* Media Section */
+        .media-section {
+            margin-bottom: 60px;
         }
-        .game-modes-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .game-modes h2 {
+        .coming-soon-box {
+            background: rgba(255,255,255,0.05);
+            border: 2px dashed #4a7c23;
+            border-radius: 16px;
+            padding: 40px;
             text-align: center;
-            color: #472F6D;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
         }
-        .mode-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .coming-soon-box h3 {
+            font-size: 1.4rem;
+            color: #a8d080;
+            margin-bottom: 10px;
         }
-        .mode-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            border: 2px solid #472F6D;
-        }
-        .mode-card h3 {
-            color: #472F6D;
-            margin-bottom: 8px;
-        }
-        .mode-card p {
-            color: #5a4a6a;
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .coming-soon-box p {
+            color: #88aa66;
         }
 
         /* Footer */
         .footer {
-            background: #2d5016;
+            background: rgba(0,0,0,0.3);
             color: white;
             padding: 40px 20px;
             text-align: center;
-        }
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+            margin-top: 40px;
         }
         .footer-links {
             display: flex;
@@ -226,24 +148,23 @@
         }
         .copyright {
             font-size: 0.85rem;
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         /* Responsive */
         @media (max-width: 600px) {
+            .company-name {
+                font-size: 1.8rem;
+            }
             .tagline {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+            .app-card {
+                padding: 20px;
             }
             .app-icon {
-                width: 150px;
-                height: 150px;
-                border-radius: 30px;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .frog-banking h2, .game-modes h2 {
-                font-size: 1.4rem;
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -252,92 +173,41 @@
 
     <!-- Header -->
     <header class="header">
-        <img src="/images/ui/frog-it-logo-wide.png" alt="Frog It!" class="logo">
-        <p class="tagline">Save Your Rolls, Use 'Em Wisely!</p>
+        <h1 class="company-name">Discover Oregon</h1>
+        <p class="tagline">Video Productions & Mobile Apps</p>
     </header>
 
-    <!-- App Showcase -->
-    <section class="showcase">
-        <img src="/images/frog-dice-large.png" alt="Frog It! App Icon" class="app-icon">
-        <div class="app-badges">
-            <div class="coming-soon-badge">Coming Soon to the App Store</div>
-            <div class="coming-soon-badge">Coming Soon to Google Play</div>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="main">
 
-    <!-- Features -->
-    <section class="features">
-        <div class="features-inner">
-            <h2 class="section-title">A Classic Dice Game with a Strategic Twist</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Roll & Score</h3>
-                    <p>Roll five dice up to three times per turn. Hold the dice you want to keep and try to complete scoring categories like Three of a Kind, Full House, Large Straight, and more!</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Bank Your Frogs</h3>
-                    <p>Here's the twist: unused rolls become "frogs" that you can save for later! Score early to bank frogs, then spend them when you really need that extra roll.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Go for SPLASH!</h3>
-                    <p>Roll all five dice matching for a SPLASH! (Five of a Kind). Your first scores 50 points, and each additional SPLASH earns 100 bonus points!</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Compete Worldwide</h3>
-                    <p>Submit your best scores to the global leaderboard. Compete in weekly tournaments and daily wildcard challenges with randomized rules!</p>
+        <!-- Apps Section -->
+        <section class="apps-section">
+            <h2 class="section-title">Apps</h2>
+            <div class="app-card">
+                <img src="images/frog-dice-large.png" alt="Frog It! App Icon" class="app-icon">
+                <div class="app-info">
+                    <h3>Frog It!</h3>
+                    <p>A strategic five-dice scoring game with a twist - save unused rolls as "frogs" and use them when you need them most! Based on Grandma Kathy's family house rules.</p>
+                    <a href="frog-it/" class="app-link">Learn More</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Frog Banking -->
-    <section class="frog-banking">
-        <div class="frog-banking-inner">
-            <h2>The Frog Banking Mechanic</h2>
-            <div class="frog-row">
-                <img src="/images/frog/frog_blue_1.png" alt="Blue Frog" class="frog-img">
-                <img src="/images/frog/frog_green_2.png" alt="Green Frog" class="frog-img">
-                <img src="/images/frog/frog_red_3.png" alt="Red Frog" class="frog-img">
-                <img src="/images/frog/frog_yellow_4.png" alt="Yellow Frog" class="frog-img">
+        <!-- Media Section -->
+        <section class="media-section">
+            <h2 class="section-title">Video & Media</h2>
+            <div class="coming-soon-box">
+                <h3>Coming Soon</h3>
+                <p>Oregon video content and productions returning soon.</p>
             </div>
-            <p>Every turn, you get 3 free rolls. But what happens when you score after just 1 or 2 rolls? Those unused rolls become <strong>frogs</strong> that you bank for later!</p>
-            <div class="highlight">
-                <p>Need an extra roll on a crucial turn? Tap "Frog It!" to spend a banked frog and roll again. It's a blend of luck and resource management that transforms the classic dice game!</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Game Modes -->
-    <section class="game-modes">
-        <div class="game-modes-inner">
-            <h2>Multiple Ways to Play</h2>
-            <div class="mode-grid">
-                <div class="mode-card">
-                    <h3>Solo Play</h3>
-                    <p>Practice your strategy and aim for high scores. Games with standard tournament rules are eligible for trophies!</p>
-                </div>
-                <div class="mode-card">
-                    <h3>Local Multiplayer</h3>
-                    <p>Pass the device and compete with 2-4 players. Each player has their own scorecard and frog bank.</p>
-                </div>
-                <div class="mode-card">
-                    <h3>Weekly Tournament</h3>
-                    <p>Play 3 games in a row - your combined total is your tournament score. One attempt per week!</p>
-                </div>
-                <div class="mode-card">
-                    <h3>Daily Wildcard</h3>
-                    <p>Each day features random rule variations. Different rolls per turn, starting frogs, and more!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-logo">Discover Oregon, LLC</div>
         <div class="footer-links">
-            <a href="/privacy/frog-it">Privacy Policy</a>
-            <a href="mailto:support@discoveroregon.app">Contact Support</a>
+            <a href="mailto:support@discoveroregon.app">Contact</a>
         </div>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
