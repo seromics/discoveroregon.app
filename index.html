@@ -270,20 +270,20 @@
             padding: 45px 30px;
             text-align: center;
         }
-        .footer-nav {
+        .footer-links {
             display: flex;
             justify-content: center;
             gap: 35px;
             flex-wrap: wrap;
             margin-bottom: 25px;
         }
-        .footer-nav a {
+        .footer-links a {
             color: #a8c8e8;
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.2s;
         }
-        .footer-nav a:hover {
+        .footer-links a:hover {
             color: white;
         }
         .copyright {
@@ -358,10 +358,10 @@
             .footer {
                 padding: 35px 20px;
             }
-            .footer-nav {
+            .footer-links {
                 gap: 20px;
             }
-            .footer-nav a {
+            .footer-links a {
                 font-size: 0.9rem;
             }
         }
@@ -378,7 +378,6 @@
             <a href="#apps">Apps</a>
             <a href="/media/">Media</a>
             <a href="about/">About</a>
-            <a href="mailto:tyler@discoveroregon.app">Contact</a>
         </nav>
         <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
             <span></span>
@@ -389,7 +388,6 @@
             <a href="#apps" onclick="closeMenu()">Apps</a>
             <a href="/media/" onclick="closeMenu()">Media</a>
             <a href="about/">About</a>
-            <a href="mailto:tyler@discoveroregon.app">Contact</a>
         </nav>
     </header>
 
@@ -439,12 +437,11 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <nav class="footer-nav">
-            <a href="#apps">Apps</a>
-            <a href="/media/">Media</a>
-            <a href="about/">About</a>
-            <a href="mailto:tyler@discoveroregon.app">Contact</a>
-        </nav>
+        <div class="footer-links">
+            <a href="mailto:tyler@discoveroregon.app">tyler@discoveroregon.app</a>
+            <a href="https://www.linkedin.com/in/tyler-hulett-2a716618/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/tylerhulett" target="_blank">X</a>
+        </div>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
 
