@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Oregon Video Productions, LLC - Online Media & Apps</title>
-    <meta name="description" content="Video production, online media, and mobile apps from Oregon. Home of Frog It! dice game.">
-    <link rel="icon" type="image/png" href="images/frog-dice-large.png">
+    <title>Discover Oregon | Digital Media & Apps</title>
+    <meta name="description" content="Digital media, mobile apps, and creative content from the Pacific Northwest.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         * {
             margin: 0;
@@ -14,7 +14,7 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(180deg, #1a3d1a 0%, #2d5a2d 50%, #1a3d1a 100%);
+            background: linear-gradient(180deg, #1a2f1a 0%, #243524 50%, #1a2f1a 100%);
             min-height: 100vh;
             color: #fff;
         }
@@ -22,43 +22,65 @@
         /* Header */
         .header {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 50px 20px 30px;
         }
-        .company-name {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .logo {
+            max-width: 320px;
+            width: 80%;
+            height: auto;
+            margin-bottom: 20px;
         }
         .tagline {
-            font-size: 1.3rem;
-            color: #a8d080;
+            font-size: 1.1rem;
+            color: #8fbc6f;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-text {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 300;
+            line-height: 1.7;
             font-style: italic;
+        }
+        .hero-text strong {
+            color: #a8d080;
+            font-weight: 600;
         }
 
         /* Main Content */
         .main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 20px 40px;
         }
 
         /* Section Styles */
         .section-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #a8d080;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-align: center;
-            border-bottom: 2px solid #4a7c23;
-            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
 
         /* Apps Section */
         .apps-section {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         .app-card {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             border-radius: 16px;
             padding: 30px;
             display: flex;
@@ -66,25 +88,25 @@
             align-items: center;
             flex-wrap: wrap;
             justify-content: center;
-            border: 2px solid #4a7c23;
+            border: 1px solid rgba(168,208,128,0.3);
         }
         .app-icon {
-            width: 150px;
-            height: 150px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 140px;
+            height: 140px;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .app-info {
             flex: 1;
             min-width: 280px;
         }
         .app-info h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 10px;
             color: #fff;
         }
         .app-info p {
-            color: #c8e6a0;
+            color: #b8d8a0;
             line-height: 1.6;
             margin-bottom: 15px;
         }
@@ -92,43 +114,45 @@
             display: inline-block;
             background: #4a7c23;
             color: white;
-            padding: 12px 24px;
+            padding: 12px 28px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.2s;
         }
         .app-link:hover {
             background: #5a9030;
+            transform: translateY(-2px);
         }
 
         /* Media Section */
         .media-section {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         .coming-soon-box {
-            background: rgba(255,255,255,0.05);
-            border: 2px dashed #4a7c23;
+            background: rgba(255,255,255,0.04);
+            border: 1px dashed rgba(168,208,128,0.4);
             border-radius: 16px;
-            padding: 40px;
+            padding: 50px 30px;
             text-align: center;
         }
         .coming-soon-box h3 {
-            font-size: 1.4rem;
-            color: #a8d080;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            color: #8fbc6f;
+            margin-bottom: 12px;
+            font-weight: 400;
         }
         .coming-soon-box p {
-            color: #88aa66;
+            color: #6a8a5a;
+            line-height: 1.6;
         }
 
         /* Footer */
         .footer {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.4);
             color: white;
-            padding: 40px 20px;
+            padding: 35px 20px;
             text-align: center;
-            margin-top: 40px;
         }
         .footer-links {
             display: flex;
@@ -138,7 +162,7 @@
             margin-bottom: 20px;
         }
         .footer-links a {
-            color: #a8d080;
+            color: #8fbc6f;
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -148,23 +172,23 @@
         }
         .copyright {
             font-size: 0.85rem;
-            opacity: 0.7;
+            color: #6a8a5a;
         }
 
         /* Responsive */
         @media (max-width: 600px) {
-            .company-name {
-                font-size: 1.8rem;
-            }
-            .tagline {
-                font-size: 1rem;
+            .hero-text {
+                font-size: 1.2rem;
             }
             .app-card {
                 padding: 20px;
             }
             .app-icon {
-                width: 120px;
-                height: 120px;
+                width: 110px;
+                height: 110px;
+            }
+            .app-info h3 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -173,9 +197,14 @@
 
     <!-- Header -->
     <header class="header">
-        <h1 class="company-name">Discover Oregon</h1>
-        <p class="tagline">Video Productions & Mobile Apps</p>
+        <img src="images/logo-stacked.png" alt="Discover Oregon" class="logo">
+        <p class="tagline">Digital Media & Apps from the Pacific Northwest</p>
     </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <p class="hero-text">An effort to recreate what it feels like to be in a few of <strong>Oregon's most beautiful places</strong> — through video, apps, and digital experiences.</p>
+    </section>
 
     <!-- Main Content -->
     <main class="main">
@@ -187,7 +216,7 @@
                 <img src="images/frog-dice-large.png" alt="Frog It! App Icon" class="app-icon">
                 <div class="app-info">
                     <h3>Frog It!</h3>
-                    <p>A strategic five-dice scoring game with a twist - save unused rolls as "frogs" and use them when you need them most! Based on Grandma Kathy's family house rules.</p>
+                    <p>A strategic five-dice scoring game with a twist — save unused rolls as "frogs" and use them when you need them most. Based on Grandma Kathy's family house rules.</p>
                     <a href="frog-it/" class="app-link">Learn More</a>
                 </div>
             </div>
@@ -198,7 +227,7 @@
             <h2 class="section-title">Video & Media</h2>
             <div class="coming-soon-box">
                 <h3>Coming Soon</h3>
-                <p>Oregon video content and productions returning soon.</p>
+                <p>Timelapse films, nature documentaries, and Oregon content returning soon.</p>
             </div>
         </section>
 
