@@ -162,6 +162,18 @@
             background: #fef3cd;
             color: #856404;
         }
+        .app-status.in-dev {
+            background: #e2e3e5;
+            color: #495057;
+        }
+        .app-icon-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 24px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+            object-fit: cover;
+        }
 
         /* Footer */
         .footer {
@@ -202,7 +214,8 @@
                 padding: 25px 20px;
                 gap: 20px;
             }
-            .app-icon {
+            .app-icon,
+            .app-icon-img {
                 width: 90px;
                 height: 90px;
             }
@@ -254,6 +267,15 @@
                 <span class="app-status">Coming Soon</span>
             </div>
         </a>
+
+        <div class="app-card">
+            <img src="../images/hero-aurora.jpg" alt="Discover Oregon Soundscapes" class="app-icon-img">
+            <div class="app-info">
+                <h3>Discover Oregon Soundscapes</h3>
+                <p>Escape to nature from anywhere. Immersive audio recordings from Oregon's wild places paired with stunning timelapse visuals – designed to help you unwind, focus, or simply feel like you're somewhere beautiful.</p>
+                <span class="app-status in-dev">In Development</span>
+            </div>
+        </div>
 
     </main>
 
