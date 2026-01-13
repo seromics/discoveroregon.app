@@ -62,12 +62,29 @@ Stock photography available on:
 
 ## YouTube Content
 
-| Playlist | Link |
-|----------|------|
-| **Discover Oregon** | TODO: Add playlist URL |
-| **Short Videos** | TODO: Add playlist URL |
-
 Channel: https://www.youtube.com/@tylerhulett2909
+
+### Discover Oregon Films (on site)
+- igKK-T0_2rk
+- G3wJcq5uF8w
+- xsxhS7NmoFI
+- 2tksAb7Sjgg
+
+<!-- Portraits of Oregon (not currently on site)
+- ULwAUXKYFF4
+-->
+
+### Short Videos (on site)
+- j6DFvKT6qyc
+- U1MEPe0dG6c
+- VLEA-InQbDc
+- CX8DSLWv0C8
+- D1417qK60ig
+- o8GsQPcjWSU
+- ZqykHFYr4fo
+- sDoePS95Gss
+
+Playlist: https://youtube.com/playlist?list=PLAPEFJJJGKKwZ6pUnHp9AIPqCjEFhVclV
 
 ---
 
