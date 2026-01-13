@@ -179,9 +179,15 @@
             font-weight: 400;
         }
 
-        /* Apps Section */
-        .apps-section {
+        /* Apps & Other Sections - Side by Side */
+        .dual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
             margin-bottom: 60px;
+        }
+        .apps-section, .other-section {
+            margin-bottom: 0;
         }
         .app-grid {
             display: grid;
@@ -239,6 +245,29 @@
         .app-status.coming-soon {
             background: #fef3cd;
             color: #856404;
+        }
+
+        /* Other Section Card */
+        .other-card {
+            flex-direction: column;
+            text-decoration: none;
+        }
+        .other-card h3 {
+            color: #1a3d5c;
+        }
+        .other-card h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .other-card h3 a:hover {
+            color: #4a7c23;
+        }
+        .other-preview {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
         }
 
         /* Media Section */
@@ -376,6 +405,9 @@
             .license-links {
                 grid-template-columns: 1fr;
             }
+            .dual-section {
+                grid-template-columns: 1fr;
+            }
 
             /* Footer */
             .footer {
@@ -455,20 +487,39 @@
             </div>
         </section>
 
-        <!-- Apps Section -->
-        <section id="apps" class="apps-section">
-            <h2 class="section-title">Apps</h2>
-            <div class="app-grid">
-                <div class="app-card">
-                    <img src="images/frog-dice-large.png" alt="Frog It!" class="app-icon">
-                    <div class="app-info">
-                        <h3><a href="frog-it/">Frog It!</a></h3>
-                        <p>A strategic five-dice scoring game with a twist — save unused rolls as "frogs" and use them when you need them most. Based on Grandma Kathy's family house rules.</p>
-                        <span class="app-status coming-soon">Coming Soon</span>
+        <!-- Apps & Other Side by Side -->
+        <div class="dual-section">
+            <!-- Apps Section -->
+            <section id="apps" class="apps-section">
+                <h2 class="section-title">Apps</h2>
+                <div class="app-grid">
+                    <div class="app-card">
+                        <img src="images/frog-dice-large.png" alt="Frog It!" class="app-icon">
+                        <div class="app-info">
+                            <h3><a href="frog-it/">Frog It!</a></h3>
+                            <p>A strategic five-dice scoring game with a twist — save unused rolls as "frogs" and use them when you need them most. Based on Grandma Kathy's family house rules.</p>
+                            <span class="app-status coming-soon">Coming Soon</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Other Section -->
+            <section id="other" class="other-section">
+                <h2 class="section-title">Other</h2>
+                <div class="app-grid">
+                    <div class="app-card other-card">
+                        <a href="https://caatlas.com" target="_blank">
+                            <img src="images/caa_home.png" alt="Cancer Antibody Atlas" class="other-preview">
+                        </a>
+                        <div class="app-info">
+                            <h3><a href="https://caatlas.com" target="_blank">Cancer Antibody Atlas</a></h3>
+                            <p>An international initiative to decode cancer through antigen-specific immunity. Explore antibody responses across 21,000+ human proteins and hundreds of thousands of viral peptides to understand the relationship between adaptive immunity and cancer.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
     </main>
 

@@ -14,29 +14,93 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(180deg, #c8e6a0 0%, #a8d080 100%);
+            background: #fff4ee;
             min-height: 100vh;
-            color: #2d5016;
+            color: #2d3a4a;
         }
 
-        /* Back link */
-        .back-link {
-            display: inline-block;
-            padding: 15px 20px;
-            color: #2d5016;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Header */
+        /* Sticky Header */
         .header {
-            text-align: center;
-            padding: 20px 20px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
         }
         .logo {
+            height: 36px;
+            width: auto;
+        }
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav a {
+            color: #1a3d5c;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #4a7c23;
+        }
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #1a3d5c;
+            margin: 5px 0;
+        }
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .mobile-nav.open {
+            display: block;
+        }
+        .mobile-nav a {
+            display: block;
+            padding: 12px 30px;
+            color: #1a3d5c;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        /* App Hero */
+        .app-hero {
+            background: linear-gradient(180deg, #c8e6a0 0%, #a8d080 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .app-logo {
             max-width: 350px;
             width: 90%;
             height: auto;
@@ -51,14 +115,13 @@
 
         /* App Showcase */
         .showcase {
+            background: linear-gradient(180deg, #a8d080 0%, #fff4ee 100%);
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 40px;
-            padding: 30px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            padding: 30px 20px 50px;
         }
         .app-icon {
             width: 200px;
@@ -70,14 +133,6 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-        }
-        .badge {
-            height: 50px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .badge:hover {
-            transform: scale(1.05);
         }
         .coming-soon-badge {
             background: #333;
@@ -100,10 +155,9 @@
         .section-title {
             text-align: center;
             font-size: 2rem;
-            color: #2d5016;
+            color: #1a3d5c;
             margin-bottom: 40px;
         }
-
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -119,9 +173,6 @@
             color: #3d6010;
             font-size: 1.3rem;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         .feature-card p {
             color: #4a6a2a;
@@ -208,41 +259,46 @@
             line-height: 1.5;
         }
 
-        /* Footer */
-        .footer {
-            background: #2d5016;
-            color: white;
-            padding: 40px 20px;
+        /* Privacy Link Section */
+        .privacy-section {
+            background: #fff4ee;
+            padding: 30px 20px;
             text-align: center;
         }
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .privacy-section a {
+            color: #1a3d5c;
+            font-weight: 500;
         }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+        .privacy-section a:hover {
+            color: #4a7c23;
         }
-        .footer-links a {
-            color: #a8d080;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover {
+
+        /* Footer */
+        .footer {
+            background: #1a3d5c;
             color: white;
-            text-decoration: underline;
+            padding: 12px 30px;
+            text-align: center;
         }
         .copyright {
-            font-size: 0.85rem;
-            opacity: 0.8;
+            font-size: 0.8rem;
+            color: #7a9aba;
         }
 
         /* Responsive */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 20px;
+            }
+            .logo {
+                height: 30px;
+            }
+            .nav {
+                display: none;
+            }
+            .menu-btn {
+                display: block;
+            }
             .tagline {
                 font-size: 1.1rem;
             }
@@ -257,18 +313,41 @@
             .frog-banking h2, .game-modes h2 {
                 font-size: 1.4rem;
             }
+            .footer {
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <a href="/" class="back-link">&larr; Back to Discover Oregon</a>
-
-    <!-- Header -->
+    <!-- Sticky Header -->
     <header class="header">
-        <img src="../images/ui/frog-it-logo-wide.png" alt="Frog It!" class="logo">
-        <p class="tagline">Save Your Rolls, Use 'Em Wisely!</p>
+        <a href="/" class="logo-link">
+            <img src="../images/logo-wide.png" alt="Discover Oregon" class="logo">
+        </a>
+        <nav class="nav">
+            <a href="/media/">Media</a>
+            <a href="/#apps">Apps</a>
+            <a href="/about/">About</a>
+        </nav>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/media/">Media</a>
+            <a href="/#apps">Apps</a>
+            <a href="/about/">About</a>
+        </nav>
     </header>
+
+    <!-- App Hero -->
+    <section class="app-hero">
+        <img src="../images/ui/frog-it-logo-wide.png" alt="Frog It!" class="app-logo">
+        <p class="tagline">Save Your Rolls, Use 'Em Wisely!</p>
+    </section>
 
     <!-- App Showcase -->
     <section class="showcase">
@@ -346,15 +425,21 @@
         </div>
     </section>
 
+    <!-- Privacy Link -->
+    <section class="privacy-section">
+        <a href="privacy/">Privacy Policy</a> · <a href="mailto:support@discoveroregon.app">Contact Support</a>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-logo">Discover Oregon</div>
-        <div class="footer-links">
-            <a href="privacy/">Privacy Policy</a>
-            <a href="mailto:support@discoveroregon.app">Contact Support</a>
-        </div>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileNav').classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>
