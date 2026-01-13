@@ -12,7 +12,7 @@ Stock footage available for licensing on:
 | Platform | Portfolio Link |
 |----------|---------------|
 | **Keycut** | https://www.keycutstock.com/artist/403 |
-| **Pond5** | https://www.pond5.com/artist/discoveroregon |
+| **Pond5** | https://www.pond5.com/artist/discoveroregon?tab=footage |
 | **Getty Images** | https://www.gettyimages.com/search/2/film?artistexact=Tyler%20Hulett |
 | **Shutterstock** | https://www.shutterstock.com/g/discoveroregon/video |
 | **Adobe Stock** | https://stock.adobe.com/contributor/207325769/Tyler%20Hulett |
@@ -50,7 +50,7 @@ Stock photography available on:
 | **Getty Images** | https://www.gettyimages.com/search/2/image?artistexact=Tyler%20Hulett |
 | **Adobe Stock** | https://stock.adobe.com/contributor/207325769/Tyler%20Hulett |
 | **Shutterstock** | https://www.shutterstock.com/g/discoveroregon |
-| **Pond5** | https://www.pond5.com/artist/discoveroregon |
+| **Pond5** | https://www.pond5.com/artist/discoveroregon?tab=photo |
 
 **Content includes:**
 - Oregon landscapes
