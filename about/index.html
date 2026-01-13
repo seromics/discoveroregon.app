@@ -14,7 +14,7 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #fff4ee;
+            background: #1a3d5c;
             min-height: 100vh;
             color: #2d3a4a;
         }
@@ -105,28 +105,39 @@
             color: #4a7c23;
         }
 
+        /* Hero Background */
+        .hero-bg {
+            background: url('../images/hero-aurora.jpg') center center / cover no-repeat fixed;
+            min-height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 30px;
+        }
+
         /* Main Content */
         .main {
             max-width: 700px;
-            margin: 0 auto;
-            padding: 60px 30px;
+            width: 100%;
         }
 
         .page-title {
             font-size: 2rem;
-            color: #1a3d5c;
+            color: #fff;
             margin-bottom: 35px;
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .about-content {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 16px;
             padding: 45px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
         }
 
         .about-content p {
@@ -165,15 +176,17 @@
             display: flex;
             gap: 25px;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .social-links a {
-            color: #5a6a7a;
+            color: #1a3d5c;
             text-decoration: none;
             font-size: 0.95rem;
+            font-weight: 700;
             transition: color 0.2s;
         }
         .social-links a:hover {
-            color: #1a3d5c;
+            color: #4a7c23;
         }
 
         /* Footer */
@@ -182,22 +195,6 @@
             color: white;
             padding: 45px 30px;
             text-align: center;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
-        }
-        .footer-links a {
-            color: #a8c8e8;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover {
-            color: white;
         }
         .copyright {
             font-size: 0.8rem;
@@ -219,8 +216,9 @@
                 display: block;
             }
 
-            .main {
+            .hero-bg {
                 padding: 40px 20px;
+                background-attachment: scroll;
             }
             .page-title {
                 font-size: 1.5rem;
@@ -245,12 +243,6 @@
             .footer {
                 padding: 35px 20px;
             }
-            .footer-links {
-                gap: 20px;
-            }
-            .footer-links a {
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
@@ -262,8 +254,8 @@
             <img src="../images/logo-wide.png" alt="Discover Oregon" class="logo">
         </a>
         <nav class="nav">
-            <a href="/#apps">Apps</a>
             <a href="/media/">Media</a>
+            <a href="/#apps">Apps</a>
             <a href="/about/">About</a>
         </nav>
         <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
@@ -272,41 +264,39 @@
             <span></span>
         </button>
         <nav class="mobile-nav" id="mobileNav">
-            <a href="/#apps">Apps</a>
             <a href="/media/">Media</a>
+            <a href="/#apps">Apps</a>
             <a href="/about/">About</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <h1 class="page-title">About</h1>
+    <!-- Hero Background with Content -->
+    <div class="hero-bg">
+        <main class="main">
+            <h1 class="page-title">About</h1>
 
-        <div class="about-content">
-            <p>This site is run by me — <span class="highlight">Tyler Hulett, PhD</span>. I'm a 5th generation Oregonian, scientist, and part-time filmmaker based in Portland.</p>
+            <div class="about-content">
+                <p>This site is run by me — <span class="highlight">Tyler Hulett, PhD</span>. I'm a 5th generation Oregonian, scientist, and part-time filmmaker based in Portland.</p>
 
-            <p>By day, I'm CSO at <a href="https://cdilabs.com" target="_blank">CDI Labs</a>, working on antibody research. I also built <a href="https://caatlas.com" target="_blank">CAAtlas</a> for the science community. By night (and weekends), I build apps and capture Oregon's landscapes through timelapse and video.</p>
+                <p>By day, I'm CSO at <a href="https://cdilabs.com" target="_blank">CDI Labs</a>, working on antibody research. I also built <a href="https://caatlas.com" target="_blank">CAAtlas</a> for the science community. By night (and weekends), I build apps and capture Oregon's landscapes through timelapse and video.</p>
 
-            <p>Discover Oregon started as an effort to recreate what it feels like to be in a few of Oregon's most beautiful places. Now expanding into apps, including <a href="/frog-it/">Frog It!</a> — a family dice game based on my grandmother's house rules.</p>
+                <p>Discover Oregon started as an effort to recreate what it feels like to be in a few of Oregon's most beautiful places. Now expanding into apps, including <a href="/frog-it/">Frog It!</a> — a family dice game based on my grandmother's house rules.</p>
 
-            <div class="signature-block">
-                <img src="../images/signature-blue.png" alt="tyler">
+                <div class="signature-block">
+                    <img src="../images/signature-blue.png" alt="tyler">
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/tyler-hulett-2a716618/" target="_blank">LinkedIn</a>
+                    <a href="https://x.com/seromics" target="_blank">X</a>
+                    <a href="mailto:tyler@discoveroregon.app">tyler@discoveroregon.app</a>
+                </div>
             </div>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/tyler-hulett-2a716618/" target="_blank">LinkedIn</a>
-                <a href="https://x.com/seromics" target="_blank">X</a>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="mailto:tyler@discoveroregon.app">tyler@discoveroregon.app</a>
-            <a href="https://www.linkedin.com/in/tyler-hulett-2a716618/" target="_blank">LinkedIn</a>
-            <a href="https://x.com/seromics" target="_blank">X</a>
-        </div>
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
 
