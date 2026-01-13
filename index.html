@@ -40,10 +40,35 @@
             line-height: 1.6;
         }
 
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background: url('images/hero-mthood.jpg') center center / cover no-repeat;
+            position: relative;
+        }
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, #fff4ee);
+        }
+        .hero-caption {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 50px 20px;
+            padding: 30px 20px 50px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -213,6 +238,11 @@
         <img src="images/logo-wide.png" alt="Discover Oregon" class="logo">
         <p class="tagline">Digital Media & Apps from the Pacific Northwest</p>
     </header>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+        <span class="hero-caption">Mt. Hood from Lost Lake Butte</span>
+    </div>
 
     <!-- Hero -->
     <section class="hero">
