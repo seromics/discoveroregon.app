@@ -96,52 +96,39 @@
             border-bottom: none;
         }
 
-        /* App Hero */
+        /* App Hero - Compact inline layout */
         .app-hero {
-            background: linear-gradient(180deg, #c8e6a0 0%, #a8d080 100%);
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .app-logo {
-            max-width: 350px;
-            width: 90%;
-            height: auto;
-        }
-        .tagline {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #3d6010;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        /* App Showcase */
-        .showcase {
-            background: linear-gradient(180deg, #a8d080 0%, #fff4ee 100%);
+            background: linear-gradient(180deg, #c8e6a0 0%, #a8d080 50%, #fff4ee 100%);
+            padding: 30px 20px 40px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-            padding: 30px 20px 50px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .app-logo-square {
+            width: 160px;
+            height: 160px;
+            border-radius: 32px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
         .app-icon {
-            width: 200px;
-            height: 200px;
-            border-radius: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 160px;
+            height: 160px;
+            border-radius: 32px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
         .app-badges {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
         .coming-soon-badge {
             background: #333;
             color: white;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-align: center;
         }
 
@@ -149,6 +136,16 @@
         .story-section {
             background: white;
             padding: 50px 20px;
+        }
+        .story-frog-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .story-frog-row img {
+            width: 45px;
+            height: 45px;
         }
         .story-inner {
             max-width: 800px;
@@ -379,50 +376,6 @@
             padding: 3px 0;
         }
 
-        /* Frog Banking Highlight */
-        .frog-banking {
-            background: linear-gradient(135deg, #fef3cd 0%, #fce9a0 100%);
-            padding: 50px 20px;
-        }
-        .frog-banking-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .frog-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .frog-img {
-            width: 50px;
-            height: 50px;
-        }
-        .frog-banking h2 {
-            color: #8b6914;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        .frog-banking p {
-            color: #6b5210;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .frog-banking .highlight {
-            background: #fff3c4;
-            border: 2px solid #fabb00;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 25px;
-        }
-        .frog-banking .highlight p {
-            font-weight: 600;
-            color: #8b6914;
-        }
-
         /* Game Modes */
         .game-modes {
             background: #fff4ee;
@@ -612,13 +565,15 @@
             .menu-btn {
                 display: block;
             }
-            .tagline {
-                font-size: 1.1rem;
+            .app-hero {
+                gap: 20px;
+                padding: 25px 15px 35px;
             }
+            .app-logo-square,
             .app-icon {
-                width: 150px;
-                height: 150px;
-                border-radius: 30px;
+                width: 120px;
+                height: 120px;
+                border-radius: 24px;
             }
             .story-inner {
                 flex-direction: column;
@@ -634,7 +589,7 @@
             .section-title {
                 font-size: 1.4rem;
             }
-            .frog-banking h2, .game-modes h2 {
+            .game-modes h2 {
                 font-size: 1.4rem;
             }
             .footer {
@@ -711,14 +666,9 @@
         </nav>
     </header>
 
-    <!-- App Hero -->
+    <!-- App Hero - Compact inline -->
     <section class="app-hero">
-        <img src="../images/ui/frog-it-logo-wide.png" alt="Frog It!" class="app-logo">
-        <p class="tagline">Save Your Rolls, Use 'Em Wisely!</p>
-    </section>
-
-    <!-- App Showcase -->
-    <section class="showcase">
+        <img src="../images/ui/frog-it-logo-square.png" alt="Frog It!" class="app-logo-square">
         <img src="../images/frog-dice-large.png" alt="Frog It! App Icon" class="app-icon">
         <div class="app-badges">
             <div class="coming-soon-badge">Coming Soon to iOS</div>
@@ -726,8 +676,14 @@
         </div>
     </section>
 
-    <!-- The Story - Now at top -->
+    <!-- The Story -->
     <section class="story-section">
+        <div class="story-frog-row">
+            <img src="../images/frog/frog_blue_1.png" alt="Blue Frog">
+            <img src="../images/frog/frog_green_2.png" alt="Green Frog">
+            <img src="../images/frog/frog_red_3.png" alt="Red Frog">
+            <img src="../images/frog/frog_yellow_4.png" alt="Yellow Frog">
+        </div>
         <div class="story-inner">
             <div class="story-text">
                 <h2>A Family Game, 30+ Years in the Making</h2>
@@ -837,23 +793,6 @@
                     <img src="../images/frog-it/phone/phone_9_online.jpg" alt="Compete online">
                     <p class="caption">Compete Online</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bank Unused Rolls as Frogs -->
-    <section class="frog-banking">
-        <div class="frog-banking-inner">
-            <h2>Bank Unused Rolls as Frogs</h2>
-            <div class="frog-row">
-                <img src="../images/frog/frog_blue_1.png" alt="Blue Frog" class="frog-img">
-                <img src="../images/frog/frog_green_2.png" alt="Green Frog" class="frog-img">
-                <img src="../images/frog/frog_red_3.png" alt="Red Frog" class="frog-img">
-                <img src="../images/frog/frog_yellow_4.png" alt="Yellow Frog" class="frog-img">
-            </div>
-            <p>Every turn, you get 3 free rolls. But what happens when you score after just 1 or 2 rolls? Those unused rolls become <strong>frogs</strong> that you bank for later!</p>
-            <div class="highlight">
-                <p>Need an extra roll on a crucial turn? Tap "Frog It!" to spend a banked frog and roll again. It's a blend of luck and resource management that transforms the classic dice game.</p>
             </div>
         </div>
     </section>
