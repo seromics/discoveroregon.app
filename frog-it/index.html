@@ -177,20 +177,156 @@
             flex-shrink: 0;
         }
 
-        /* Features Section */
-        .features {
+        /* Device Preview Section - Side by Side */
+        .device-section {
+            background: #f0f4f8;
+            padding: 50px 20px;
+        }
+        .device-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        .device-text {
+            flex: 0 0 auto;
+            text-align: left;
+        }
+        .device-text h2 {
+            font-size: 1.6rem;
+            color: #1a3d5c;
+            margin-bottom: 8px;
+        }
+        .device-text .platforms {
+            font-size: 1.1rem;
+            color: #4a7c23;
+            font-weight: 500;
+        }
+        .device-showcase {
+            display: flex;
+            align-items: flex-end;
+            gap: 25px;
+        }
+        .device-mockup {
+            position: relative;
+            display: inline-block;
+        }
+        .device-mockup.tablet {
+            /* iPad ~9.7" display scaled */
+        }
+        .device-mockup.tablet .device-bezel {
+            padding: 18px;
+            background: linear-gradient(145deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+            border-radius: 28px;
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.3);
+        }
+        .device-mockup.tablet img {
+            display: block;
+            height: 340px;
+            width: auto;
+            border-radius: 8px;
+        }
+        .device-mockup.phone {
+            /* iPhone ~6.1" display scaled proportionally */
+        }
+        .device-mockup.phone .device-bezel {
+            padding: 12px 8px;
+            background: linear-gradient(145deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+            border-radius: 32px;
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.3);
+        }
+        .device-mockup.phone img {
+            display: block;
+            height: 280px;
+            width: auto;
+            border-radius: 20px;
+        }
+        .device-label {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Gameplay Carousel */
+        .gameplay-section {
             background: #fff4ee;
             padding: 50px 20px;
         }
-        .features-inner {
-            max-width: 900px;
+        .gameplay-inner {
+            max-width: 100%;
             margin: 0 auto;
         }
         .section-title {
             text-align: center;
             font-size: 1.6rem;
             color: #1a3d5c;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+        }
+        .carousel {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 20px;
+            -webkit-overflow-scrolling: touch;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        .carousel::-webkit-scrollbar {
+            height: 6px;
+        }
+        .carousel::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 3px;
+        }
+        .carousel::-webkit-scrollbar-thumb {
+            background: #4a7c23;
+            border-radius: 3px;
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .carousel-item:hover {
+            transform: translateY(-5px);
+        }
+        .carousel-item img {
+            height: 240px;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: box-shadow 0.2s ease;
+        }
+        .carousel-item:hover img {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .carousel-item .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 50px 20px;
+        }
+        .features-inner {
+            max-width: 900px;
+            margin: 0 auto;
         }
         .feature-grid {
             display: grid;
@@ -198,10 +334,10 @@
             gap: 30px;
         }
         .feature-card {
-            background: white;
+            background: #f8f9fa;
             border-radius: 16px;
             padding: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
         .feature-card h3 {
             color: #1a3d5c;
@@ -259,7 +395,7 @@
 
         /* Game Modes */
         .game-modes {
-            background: white;
+            background: #fff4ee;
             padding: 50px 20px;
         }
         .game-modes-inner {
@@ -278,10 +414,10 @@
             gap: 20px;
         }
         .mode-card {
-            background: #f8f9fa;
+            background: white;
             border-radius: 12px;
             padding: 20px;
-            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         }
         .mode-card h3 {
             color: #1a3d5c;
@@ -293,112 +429,7 @@
             line-height: 1.5;
         }
 
-        /* Device Preview Section */
-        .device-section {
-            background: white;
-            padding: 50px 20px;
-        }
-        .device-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .device-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-        .device-tab {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: #e8e8e8;
-            color: #666;
-        }
-        .device-tab.active {
-            background: #4a7c23;
-            color: white;
-        }
-        .device-tab:hover:not(.active) {
-            background: #d0d0d0;
-        }
-        .device-display {
-            display: none;
-            justify-content: center;
-        }
-        .device-display.active {
-            display: flex;
-        }
-        .device-frame {
-            text-align: center;
-        }
-        .device-frame img {
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            max-height: 450px;
-            width: auto;
-        }
-        .device-label {
-            margin-top: 15px;
-            font-weight: 600;
-            color: #555;
-        }
-
-        /* Gameplay Carousel */
-        .gameplay-section {
-            background: #f8f9fa;
-            padding: 50px 20px;
-        }
-        .gameplay-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .carousel {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding: 15px 5px;
-            -webkit-overflow-scrolling: touch;
-        }
-        .carousel::-webkit-scrollbar {
-            height: 8px;
-        }
-        .carousel::-webkit-scrollbar-track {
-            background: #e0e0e0;
-            border-radius: 4px;
-        }
-        .carousel::-webkit-scrollbar-thumb {
-            background: #4a7c23;
-            border-radius: 4px;
-        }
-        .carousel-item {
-            flex: 0 0 auto;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .carousel-item:hover {
-            transform: scale(1.03);
-        }
-        .carousel-item img {
-            height: 350px;
-            width: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-        }
-        .carousel-item .caption {
-            text-align: center;
-            margin-top: 12px;
-            font-size: 0.9rem;
-            color: #555;
-            font-weight: 500;
-        }
-
-        /* Lightbox */
+        /* Lightbox - Semi-transparent overlay */
         .lightbox {
             display: none;
             position: fixed;
@@ -406,61 +437,90 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.92);
+            background: rgba(0,0,0,0.85);
             z-index: 1000;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
         .lightbox.active {
             display: flex;
         }
         .lightbox-content {
             position: relative;
-            max-width: 90%;
-            max-height: 90%;
+            cursor: default;
+            animation: lightboxIn 0.25s ease-out;
+        }
+        @keyframes lightboxIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
         .lightbox-content img {
-            max-width: 100%;
-            max-height: 85vh;
-            border-radius: 10px;
+            max-width: 90vw;
+            max-height: 80vh;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
         .lightbox-close {
             position: absolute;
-            top: -45px;
-            right: 0;
-            color: white;
-            font-size: 2.5rem;
+            top: -15px;
+            right: -15px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #333;
             cursor: pointer;
-            padding: 10px;
-            line-height: 1;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .lightbox-close:hover {
+            transform: scale(1.1);
         }
         .lightbox-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            color: white;
-            font-size: 3rem;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #333;
             cursor: pointer;
-            padding: 20px;
-            user-select: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background 0.2s;
         }
         .lightbox-nav:hover {
-            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+            background: white;
         }
         .lightbox-nav.prev { left: -70px; }
         .lightbox-nav.next { right: -70px; }
         .lightbox-caption {
             color: white;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
             font-size: 1.1rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
         /* Privacy Link Section */
         .privacy-section {
-            background: #fff4ee;
+            background: white;
             padding: 30px 20px;
             text-align: center;
         }
@@ -485,6 +545,25 @@
         }
 
         /* Responsive */
+        @media (max-width: 900px) {
+            .device-inner {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .device-text {
+                text-align: center;
+            }
+            .device-showcase {
+                gap: 20px;
+            }
+            .device-mockup.tablet img {
+                height: 280px;
+            }
+            .device-mockup.phone img {
+                height: 230px;
+            }
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 10px 20px;
@@ -526,18 +605,49 @@
             .footer {
                 padding: 10px 20px;
             }
-            .device-frame img {
-                max-height: 350px;
+            .carousel {
+                justify-content: flex-start;
             }
             .carousel-item img {
-                height: 280px;
+                height: 200px;
+            }
+            .device-showcase {
+                gap: 15px;
+            }
+            .device-mockup.tablet .device-bezel {
+                padding: 12px;
+                border-radius: 20px;
+            }
+            .device-mockup.tablet img {
+                height: 200px;
+            }
+            .device-mockup.phone .device-bezel {
+                padding: 8px 6px;
+                border-radius: 22px;
+            }
+            .device-mockup.phone img {
+                height: 170px;
+                border-radius: 14px;
             }
             .lightbox-nav {
-                font-size: 2rem;
-                padding: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
             }
-            .lightbox-nav.prev { left: 5px; }
-            .lightbox-nav.next { right: 5px; }
+            .lightbox-nav.prev { left: 10px; }
+            .lightbox-nav.next { right: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .device-mockup.tablet img {
+                height: 160px;
+            }
+            .device-mockup.phone img {
+                height: 140px;
+            }
+            .device-text h2 {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -580,24 +690,41 @@
         </div>
     </section>
 
-    <!-- Device Preview -->
-    <section class="device-section">
-        <div class="device-inner">
-            <h2 class="section-title">Optimized for Phone & Tablet</h2>
-            <div class="device-tabs">
-                <button class="device-tab active" data-device="phone">iPhone</button>
-                <button class="device-tab" data-device="tablet">iPad</button>
-            </div>
-            <div class="device-display active" id="phone-display">
-                <div class="device-frame">
-                    <img src="../images/frog-it/phone/phone_1_home.jpg" alt="Frog It! on iPhone">
-                    <p class="device-label">iPhone</p>
+    <!-- The Story - Now at top -->
+    <section class="story-section">
+        <div class="story-inner">
+            <div class="story-text">
+                <h2>A Family Game, 30+ Years in the Making</h2>
+                <p>My Grandma Kathy loved that dice game you've heard of, but she played it differently. She kept a box of little plastic frogs on the table and whenever you scored early, you'd take out a frog representing your unused roll to save for later. If you were close to getting five-of-a-kind and out of turns – we'd all shout "Frog It!" – encouraging you to spend a frog and earn those points!</p>
+                <p>Today, my family still holds annual tournaments at the lake to crown "The Y*****e Queen" – the winner receiving our family trophy and bragging rights. But it's not really that game we play – it's this one!</p>
+                <p>I've tried other dice game apps, but none were as fun – because what's the fun without Grandma's frogs? Without frogs, it's just rolling dice and filling categories. The frogs add real strategy and make every game different. I couldn't stand not having a proper version of this for my family when we're not together. So here it is, and I hope you'll love it too.</p>
+                <div style="text-align: center; margin-top: 25px;">
+                    <img src="../images/signature-blue.png" alt="tyler" style="height: 50px; width: auto;">
                 </div>
             </div>
-            <div class="device-display" id="tablet-display">
-                <div class="device-frame">
-                    <img src="../images/frog-it/tablet/tablet_1_home.jpg" alt="Frog It! on iPad">
+            <img src="../images/ui/trophy_large.png" alt="The Queen Trophy" class="trophy-img">
+        </div>
+    </section>
+
+    <!-- Device Preview - Side by Side -->
+    <section class="device-section">
+        <div class="device-inner">
+            <div class="device-text">
+                <h2>Optimized for Phone & Tablet</h2>
+                <p class="platforms">(iOS & Android)</p>
+            </div>
+            <div class="device-showcase">
+                <div class="device-mockup tablet">
+                    <div class="device-bezel">
+                        <img src="../images/frog-it/tablet/tablet_1_home.jpg" alt="Frog It! on iPad">
+                    </div>
                     <p class="device-label">iPad</p>
+                </div>
+                <div class="device-mockup phone">
+                    <div class="device-bezel">
+                        <img src="../images/frog-it/phone/phone_1_home.jpg" alt="Frog It! on iPhone">
+                    </div>
+                    <p class="device-label">iPhone</p>
                 </div>
             </div>
         </div>
@@ -644,22 +771,6 @@
         </div>
     </section>
 
-    <!-- The Story -->
-    <section class="story-section">
-        <div class="story-inner">
-            <div class="story-text">
-                <h2>A Family Game, 30+ Years in the Making</h2>
-                <p>My Grandma Kathy loved that dice game you've heard of, but she played it differently. She kept a box of little plastic frogs on the table and whenever you scored early, you'd take out a frog representing your unused roll to save for later. If you were close to getting five-of-a-kind and out of turns – we'd all shout "Frog It!" – encouraging you to spend a frog and earn those points!</p>
-                <p>Today, my family still holds annual tournaments at the lake to crown "The Y*****e Queen" – the winner receiving our family trophy and bragging rights. But it's not really that game we play – it's this one!</p>
-                <p>I've tried other dice game apps, but none were as fun – because what's the fun without Grandma's frogs? Without frogs, it's just rolling dice and filling categories. The frogs add real strategy and make every game different. I couldn't stand not having a proper version of this for my family when we're not together. So here it is, and I hope you'll love it too.</p>
-                <div style="text-align: center; margin-top: 25px;">
-                    <img src="../images/signature-blue.png" alt="tyler" style="height: 50px; width: auto;">
-                </div>
-            </div>
-            <img src="../images/ui/trophy_large.png" alt="The Queen Trophy" class="trophy-img">
-        </div>
-    </section>
-
     <!-- How It Works -->
     <section class="features">
         <div class="features-inner">
@@ -681,10 +792,10 @@
         </div>
     </section>
 
-    <!-- Frog Banking -->
+    <!-- Bank Unused Rolls as Frogs -->
     <section class="frog-banking">
         <div class="frog-banking-inner">
-            <h2>The Frog Banking Mechanic</h2>
+            <h2>Bank Unused Rolls as Frogs</h2>
             <div class="frog-row">
                 <img src="../images/frog/frog_blue_1.png" alt="Blue Frog" class="frog-img">
                 <img src="../images/frog/frog_green_2.png" alt="Green Frog" class="frog-img">
@@ -731,31 +842,19 @@
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <span class="lightbox-nav prev">&#8249;</span>
         <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <span class="lightbox-nav prev">&#8249;</span>
+            <span class="lightbox-nav next">&#8250;</span>
             <img src="" alt="" id="lightbox-img">
             <p class="lightbox-caption" id="lightbox-caption"></p>
         </div>
-        <span class="lightbox-nav next">&#8250;</span>
     </div>
 
     <script>
         function toggleMenu() {
             document.getElementById('mobileNav').classList.toggle('open');
         }
-
-        // Device tabs
-        const deviceTabs = document.querySelectorAll('.device-tab');
-        deviceTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                deviceTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const device = tab.dataset.device;
-                document.querySelectorAll('.device-display').forEach(d => d.classList.remove('active'));
-                document.getElementById(device + '-display').classList.add('active');
-            });
-        });
 
         // Lightbox
         const lightbox = document.getElementById('lightbox');
@@ -803,9 +902,16 @@
         });
 
         document.querySelector('.lightbox-close').addEventListener('click', hideLightbox);
-        document.querySelector('.lightbox-nav.prev').addEventListener('click', () => navigate(-1));
-        document.querySelector('.lightbox-nav.next').addEventListener('click', () => navigate(1));
+        document.querySelector('.lightbox-nav.prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigate(-1);
+        });
+        document.querySelector('.lightbox-nav.next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigate(1);
+        });
 
+        // Click outside to close
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) hideLightbox();
         });
