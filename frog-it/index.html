@@ -336,6 +336,11 @@
             border-radius: 16px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         .feature-card h3 {
             color: #1a3d5c;
@@ -349,15 +354,6 @@
         }
         .feature-card p:last-child {
             margin-bottom: 0;
-        }
-        .feature-card ul.category-list {
-            margin: 10px 0;
-            padding-left: 20px;
-            color: #5a6a7a;
-            font-size: 0.95rem;
-        }
-        .feature-card ul.category-list li {
-            margin-bottom: 4px;
         }
         /* Feature images */
         .feature-img {
@@ -770,6 +766,40 @@
         </div>
     </section>
 
+    <!-- How It Works -->
+    <section class="features">
+        <div class="features-inner">
+            <h2 class="section-title">How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Roll & Score</h3>
+                    <div class="feature-img">
+                        <img src="../images/frog-it/score.png" alt="Roll and hold dice">
+                    </div>
+                    <p>Roll five dice up to <strong>3 times per turn</strong>. Tap any die to hold it (won't change on next roll). Fill all 13 categories to complete the game.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Bank Your Frogs</h3>
+                    <div class="feature-img">
+                        <img src="../images/frog-it/bank.png" alt="Bank unused rolls as frogs">
+                    </div>
+                    <p>Score early to bank unused rolls as frogs. Need an extra roll later? Tap <strong>"Frog It!"</strong> to spend a banked frog and roll again!</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Go for SPLASH!</h3>
+                    <div class="feature-img">
+                        <img src="../images/frog-it/splash.png" alt="SPLASH! Five of a kind">
+                    </div>
+                    <p>Roll all five dice matching for a <strong>SPLASH!</strong> (Five of a Kind)</p>
+                    <div class="splash-scoring">
+                        <div>🎉 <strong>First SPLASH!</strong> = 50 pts</div>
+                        <div>🎊 <strong>BONUS SPLASH!</strong> = 100 pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gameplay Screenshots -->
     <section class="gameplay-section">
         <div class="gameplay-inner">
@@ -806,44 +836,6 @@
                 <div class="carousel-item" data-index="7">
                     <img src="../images/frog-it/phone/phone_9_online.jpg" alt="Compete online">
                     <p class="caption">Compete Online</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="features">
-        <div class="features-inner">
-            <h2 class="section-title">How It Works</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>Roll & Score</h3>
-                    <div class="feature-img">
-                        <img src="../images/frog-it/score.png" alt="Roll and hold dice">
-                    </div>
-                    <p>Roll five dice up to <strong>3 times per turn</strong>. Tap any die to hold it (won't change on next roll). Fill all 13 categories to complete the game:</p>
-                    <ul class="category-list">
-                        <li><strong>Upper:</strong> Ones through Sixes</li>
-                        <li><strong>Lower:</strong> 3/4 of a Kind, Full House, Straights, Chance, SPLASH!</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h3>Bank Your Frogs</h3>
-                    <div class="feature-img">
-                        <img src="../images/frog-it/bank.png" alt="Bank unused rolls as frogs">
-                    </div>
-                    <p>Score early to bank unused rolls as frogs. Need an extra roll later? Tap <strong>"Frog It!"</strong> to spend a banked frog and roll again!</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Go for SPLASH!</h3>
-                    <div class="feature-img">
-                        <img src="../images/frog-it/splash.png" alt="SPLASH! Five of a kind">
-                    </div>
-                    <p>Roll all five dice matching for a <strong>SPLASH!</strong> (Five of a Kind)</p>
-                    <div class="splash-scoring">
-                        <div>🎉 <strong>First SPLASH!</strong> = 50 points</div>
-                        <div>🎊 <strong>Another SPLASH!</strong> = 100 BONUS</div>
-                    </div>
                 </div>
             </div>
         </div>
