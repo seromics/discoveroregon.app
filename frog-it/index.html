@@ -106,29 +106,38 @@
             gap: 30px;
             flex-wrap: wrap;
         }
-        .app-logo-square {
-            width: 160px;
-            height: 160px;
-            border-radius: 32px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        .app-branding {
+            text-align: center;
+        }
+        .app-logo {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #3d6010;
+            margin-top: 8px;
+            font-style: italic;
         }
         .app-icon {
-            width: 160px;
-            height: 160px;
-            border-radius: 32px;
+            width: 140px;
+            height: 140px;
+            border-radius: 28px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
         .app-badges {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
         .coming-soon-badge {
             background: #333;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-align: center;
         }
 
@@ -139,13 +148,14 @@
         }
         .story-frog-row {
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 25px;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto 25px;
+            padding: 0 40px;
         }
         .story-frog-row img {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
         }
         .story-inner {
             max-width: 800px;
@@ -569,11 +579,23 @@
                 gap: 20px;
                 padding: 25px 15px 35px;
             }
-            .app-logo-square,
+            .app-logo {
+                max-width: 220px;
+            }
+            .tagline {
+                font-size: 1rem;
+            }
             .app-icon {
-                width: 120px;
-                height: 120px;
-                border-radius: 24px;
+                width: 110px;
+                height: 110px;
+                border-radius: 22px;
+            }
+            .story-frog-row {
+                padding: 0 20px;
+            }
+            .story-frog-row img {
+                width: 40px;
+                height: 40px;
             }
             .story-inner {
                 flex-direction: column;
@@ -668,7 +690,10 @@
 
     <!-- App Hero - Compact inline -->
     <section class="app-hero">
-        <img src="../images/ui/frog-it-logo-square.png" alt="Frog It!" class="app-logo-square">
+        <div class="app-branding">
+            <img src="../images/ui/frog-it-logo-wide.png" alt="Frog It!" class="app-logo">
+            <p class="tagline">Save Your Rolls, Use 'Em Wisely!</p>
+        </div>
         <img src="../images/frog-dice-large.png" alt="Frog It! App Icon" class="app-icon">
         <div class="app-badges">
             <div class="coming-soon-badge">Coming Soon to iOS</div>
