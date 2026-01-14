@@ -293,6 +293,171 @@
             line-height: 1.5;
         }
 
+        /* Device Preview Section */
+        .device-section {
+            background: white;
+            padding: 50px 20px;
+        }
+        .device-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .device-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .device-tab {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #e8e8e8;
+            color: #666;
+        }
+        .device-tab.active {
+            background: #4a7c23;
+            color: white;
+        }
+        .device-tab:hover:not(.active) {
+            background: #d0d0d0;
+        }
+        .device-display {
+            display: none;
+            justify-content: center;
+        }
+        .device-display.active {
+            display: flex;
+        }
+        .device-frame {
+            text-align: center;
+        }
+        .device-frame img {
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            max-height: 450px;
+            width: auto;
+        }
+        .device-label {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        /* Gameplay Carousel */
+        .gameplay-section {
+            background: #f8f9fa;
+            padding: 50px 20px;
+        }
+        .gameplay-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .carousel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 15px 5px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carousel::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 4px;
+        }
+        .carousel::-webkit-scrollbar-thumb {
+            background: #4a7c23;
+            border-radius: 4px;
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .carousel-item:hover {
+            transform: scale(1.03);
+        }
+        .carousel-item img {
+            height: 350px;
+            width: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+        .carousel-item .caption {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            border-radius: 10px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 10px;
+            line-height: 1;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .lightbox-nav:hover {
+            opacity: 1;
+        }
+        .lightbox-nav.prev { left: -70px; }
+        .lightbox-nav.next { right: -70px; }
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
         /* Privacy Link Section */
         .privacy-section {
             background: #fff4ee;
@@ -361,6 +526,18 @@
             .footer {
                 padding: 10px 20px;
             }
+            .device-frame img {
+                max-height: 350px;
+            }
+            .carousel-item img {
+                height: 280px;
+            }
+            .lightbox-nav {
+                font-size: 2rem;
+                padding: 15px;
+            }
+            .lightbox-nav.prev { left: 5px; }
+            .lightbox-nav.next { right: 5px; }
         }
     </style>
 </head>
@@ -400,6 +577,70 @@
         <div class="app-badges">
             <div class="coming-soon-badge">Coming Soon to iOS</div>
             <div class="coming-soon-badge">Coming Soon to Android</div>
+        </div>
+    </section>
+
+    <!-- Device Preview -->
+    <section class="device-section">
+        <div class="device-inner">
+            <h2 class="section-title">Optimized for Phone & Tablet</h2>
+            <div class="device-tabs">
+                <button class="device-tab active" data-device="phone">iPhone</button>
+                <button class="device-tab" data-device="tablet">iPad</button>
+            </div>
+            <div class="device-display active" id="phone-display">
+                <div class="device-frame">
+                    <img src="../images/frog-it/phone/phone_1_home.jpg" alt="Frog It! on iPhone">
+                    <p class="device-label">iPhone</p>
+                </div>
+            </div>
+            <div class="device-display" id="tablet-display">
+                <div class="device-frame">
+                    <img src="../images/frog-it/tablet/tablet_1_home.jpg" alt="Frog It! on iPad">
+                    <p class="device-label">iPad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Screenshots -->
+    <section class="gameplay-section">
+        <div class="gameplay-inner">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="carousel">
+                <div class="carousel-item" data-index="0">
+                    <img src="../images/frog-it/phone/phone_2_newgame.jpg" alt="Start a new game">
+                    <p class="caption">Start a New Game</p>
+                </div>
+                <div class="carousel-item" data-index="1">
+                    <img src="../images/frog-it/phone/phone_3_getfrogs.jpg" alt="Bank your frogs">
+                    <p class="caption">Bank Your Frogs</p>
+                </div>
+                <div class="carousel-item" data-index="2">
+                    <img src="../images/frog-it/phone/phone_4_gameplay.jpg" alt="Roll and hold dice">
+                    <p class="caption">Roll & Hold Dice</p>
+                </div>
+                <div class="carousel-item" data-index="3">
+                    <img src="../images/frog-it/phone/phone_5_frogit.jpg" alt="Spend frogs for extra rolls">
+                    <p class="caption">Frog It!</p>
+                </div>
+                <div class="carousel-item" data-index="4">
+                    <img src="../images/frog-it/phone/phone_6_SPLASH.jpg" alt="SPLASH! Five of a kind">
+                    <p class="caption">SPLASH!</p>
+                </div>
+                <div class="carousel-item" data-index="5">
+                    <img src="../images/frog-it/phone/phone_7_highscore.jpg" alt="Track high scores">
+                    <p class="caption">High Scores</p>
+                </div>
+                <div class="carousel-item" data-index="6">
+                    <img src="../images/frog-it/phone/phone_8_stats.jpg" alt="View your stats">
+                    <p class="caption">Your Stats</p>
+                </div>
+                <div class="carousel-item" data-index="7">
+                    <img src="../images/frog-it/phone/phone_9_online.jpg" alt="Compete online">
+                    <p class="caption">Compete Online</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -488,10 +729,93 @@
         <p class="copyright">&copy; 2026 Discover Oregon Video Productions, LLC. All rights reserved.</p>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-nav prev">&#8249;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+        <span class="lightbox-nav next">&#8250;</span>
+    </div>
+
     <script>
         function toggleMenu() {
             document.getElementById('mobileNav').classList.toggle('open');
         }
+
+        // Device tabs
+        const deviceTabs = document.querySelectorAll('.device-tab');
+        deviceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                deviceTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const device = tab.dataset.device;
+                document.querySelectorAll('.device-display').forEach(d => d.classList.remove('active'));
+                document.getElementById(device + '-display').classList.add('active');
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        const screenshots = [
+            { src: '../images/frog-it/phone/phone_2_newgame.jpg', caption: 'Start a New Game' },
+            { src: '../images/frog-it/phone/phone_3_getfrogs.jpg', caption: 'Bank Your Frogs' },
+            { src: '../images/frog-it/phone/phone_4_gameplay.jpg', caption: 'Roll & Hold Dice' },
+            { src: '../images/frog-it/phone/phone_5_frogit.jpg', caption: 'Frog It! - Use Your Saved Rolls' },
+            { src: '../images/frog-it/phone/phone_6_SPLASH.jpg', caption: 'SPLASH! - Five of a Kind!' },
+            { src: '../images/frog-it/phone/phone_7_highscore.jpg', caption: 'Track High Scores' },
+            { src: '../images/frog-it/phone/phone_8_stats.jpg', caption: 'View Your Stats' },
+            { src: '../images/frog-it/phone/phone_9_online.jpg', caption: 'Compete Online' }
+        ];
+
+        function showLightbox(index) {
+            currentIndex = index;
+            lightboxImg.src = screenshots[index].src;
+            lightboxCaption.textContent = screenshots[index].caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigate(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = screenshots.length - 1;
+            if (currentIndex >= screenshots.length) currentIndex = 0;
+            lightboxImg.src = screenshots[currentIndex].src;
+            lightboxCaption.textContent = screenshots[currentIndex].caption;
+        }
+
+        carouselItems.forEach(item => {
+            item.addEventListener('click', () => {
+                showLightbox(parseInt(item.dataset.index));
+            });
+        });
+
+        document.querySelector('.lightbox-close').addEventListener('click', hideLightbox);
+        document.querySelector('.lightbox-nav.prev').addEventListener('click', () => navigate(-1));
+        document.querySelector('.lightbox-nav.next').addEventListener('click', () => navigate(1));
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) hideLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') hideLightbox();
+            if (e.key === 'ArrowLeft') navigate(-1);
+            if (e.key === 'ArrowRight') navigate(1);
+        });
     </script>
 
 </body>
